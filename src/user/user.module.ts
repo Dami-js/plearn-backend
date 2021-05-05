@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ModelDefinition, MongooseModule } from '@nestjs/mongoose';
+import { Material, MaterialSchema } from './schemas/files.schema';
 import { Student, StudentSchema } from './schemas/student.schema';
 import { Tutor, TutorSchema } from './schemas/tutor.schema';
 import { UserController } from './user.controller';
@@ -7,12 +8,8 @@ import { UserService } from './user.service';
 
 const models: ModelDefinition[] = [
   {
-    name: Student.name,
-    schema: StudentSchema,
-  },
-  {
-    name: Tutor.name,
-    schema: TutorSchema,
+    name: Material.name,
+    schema: MaterialSchema,
   },
 ];
 
@@ -20,5 +17,6 @@ const models: ModelDefinition[] = [
   imports: [MongooseModule.forFeature(models)],
   providers: [UserService],
   controllers: [UserController],
+  exports: [UserService],
 })
 export class UserModule {}

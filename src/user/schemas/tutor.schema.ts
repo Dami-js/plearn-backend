@@ -1,6 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Course } from 'feed/interfaces/feed.interface';
-import mongoose, { Document } from 'mongoose';
+import * as mongoose from 'mongoose';
+import { Document } from 'mongoose';
 import { Author } from 'user/interfaces/user.interface';
 
 export type TutorDocument = Tutor & Document;
