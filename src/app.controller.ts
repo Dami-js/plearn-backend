@@ -3,6 +3,7 @@ import {
   Controller,
   Get,
   Post,
+  Render,
   Request,
   UploadedFile,
   UseGuards,
@@ -29,9 +30,9 @@ export class AppController {
   ) {}
 
   @Get()
-  getHello(@Request() req): string {
-    console.log(req.user);
-    return this.appService.getHello();
+  @Render('index')
+  getHello() {
+    return { message: 'Hello world!' };
   }
 
   @UseGuards(LocalAuthGuard)

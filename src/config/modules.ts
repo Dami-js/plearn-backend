@@ -20,9 +20,6 @@ const modules: any[] = [
     imports: [ConfigModule],
     useClass: MulterConfigService,
   }),
-  ServeStaticModule.forRoot({
-    rootPath: join(__dirname, '../..', 'public'),
-  }),
   FeedModule,
   AuthModule,
   UserModule,
