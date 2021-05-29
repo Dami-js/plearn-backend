@@ -11,6 +11,10 @@ const models: ModelDefinition[] = [
     name: Material.name,
     schema: MaterialSchema,
   },
+  {
+    name: Student.name,
+    schema: StudentSchema,
+  },
 ];
 
 @Module({

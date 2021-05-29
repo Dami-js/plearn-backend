@@ -18,7 +18,6 @@ import { User } from 'decotators/user.decorator';
 import { AppService } from './app.service';
 import { Express } from 'express';
 import { UserService } from 'user/user.service';
-import { CreateMaterialDto } from 'user/schemas/files.schema';
 import { diskStorage } from 'multer';
 
 @Controller()
@@ -53,11 +52,11 @@ export class AppController {
     return 'upload file';
   }
 
-  @UseGuards(JwtAuthGuard)
-  @Get('profile')
-  getProfile(@User() user) {
-    return user;
-  }
+  // @UseGuards(JwtAuthGuard)
+  // @Get('profile')
+  // getProfile(@User() user) {
+  //   return user;
+  // }
 
   @Get('todos')
   async getTodos() {

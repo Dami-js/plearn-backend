@@ -7,22 +7,34 @@ export type StudentDocument = Student & Document;
 @Schema()
 export class Student implements Learner {
   @Prop()
-  surname: string;
-
-  @Prop()
   firstname: string;
 
   @Prop()
-  othernames: string;
+  lastname: string;
 
   @Prop()
+  level: string;
+
+  @Prop({ unique: true })
   email: string;
 
-  @Prop()
+  @Prop({ unique: true })
   studentNumber: string;
 
   @Prop()
   learningStyle: string;
+
+  @Prop()
+  isStudent: boolean;
+
+  @Prop()
+  password: string;
 }
 
-export const StudentSchema = SchemaFactory.createForClass(Student);
+const StudentSchema = SchemaFactory.createForClass(Student);
+
+StudentSchema.virtual('fullName').get(function () {
+  return `${this.firstname} ${this.surname} ${this.othernames}`;
+});
+
+export { StudentSchema };

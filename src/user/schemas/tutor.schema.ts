@@ -9,19 +9,22 @@ export type TutorDocument = Tutor & Document;
 @Schema()
 export class Tutor implements Author {
   @Prop()
-  surname: string;
-
-  @Prop()
   firstname: string;
 
   @Prop()
-  othernames: string;
+  lastname: string;
+
+  @Prop()
+  password: string;
 
   @Prop()
   email: string;
 
   @Prop()
   title: string;
+
+  @Prop()
+  isStudent: boolean;
 
   @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Course' }] })
   coursesCreated: Array<Course>;

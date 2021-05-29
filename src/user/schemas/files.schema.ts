@@ -4,7 +4,7 @@ import { Learner } from 'user/interfaces/user.interface';
 
 export type MaterialDocument = Material & Document;
 
-export interface CreateMaterialDto extends Material {}
+// export interface CreateMaterialDto extends Material {}
 
 @Schema()
 export class Material {
