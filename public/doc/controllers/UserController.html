@@ -57,20 +57,282 @@
             <code>src/user/user.controller.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Prefix</h3>
+            </p>
+            <p class="comment">
+                <code>users</code>
+            </p>
 
 
 
 
 
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
 
-    </div>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getProfile">getProfile</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#register">register</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getProfile"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            getProfile
+                        </b>
+                        <a href="#getProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getProfile(user)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseGuards(JwtAuthGuard)<br />@Get(&#x27;profile&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/user/user.controller.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>user</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="register"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            register
+                        </b>
+                        <a href="#register"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>register(body: <a href="../interfaces/User.html">UserDetails</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;register&#x27;)<br />@UsePipes(new JoiValidationPipe())<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/user/user.controller.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >UserDetails</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Controller } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  BadRequestException,
+  Body,
+  Controller,
+  Get,
+  NotAcceptableException,
+  NotFoundException,
+  Param,
+  Post,
+  UseGuards,
+  UsePipes,
+} from &#x27;@nestjs/common&#x27;;
+import { JoiValidationPipe } from &#x27;shared/joiValidation.pipe&#x27;;
+import { UserDetails } from &#x27;./dto/create-user.dto&#x27;;
+import { createUserSchema } from &#x27;./schemas/validation/create-user.schema&#x27;;
+import { UserService } from &#x27;./user.service&#x27;;
+import MongooseError from &#x27;mongoose/lib/error&#x27;;
+import { JwtAuthGuard } from &#x27;auth/jwt-auth.guard&#x27;;
+import { User } from &#x27;decotators/user.decorator&#x27;;
+import { StudentDocument } from &#x27;./schemas/student.schema&#x27;;
+import { TutorDocument } from &#x27;./schemas/tutor.schema&#x27;;
 
-@Controller()
-export class UserController {}
+function formatUserResponseData(data: any): Omit&lt;UserDetails, &#x27;password&#x27;&gt; {
+  const user: Omit&lt;UserDetails, &#x27;password&#x27;&gt; &#x3D; {
+    firstname: data.firstname,
+    _id: data._id,
+    lastname: data.lastname,
+    email: data.email,
+    isStudent: data.isStudent,
+    title: data.title,
+    coursesCreated: data.coursesCreated,
+    level: data.level,
+    studentNumber: data.studentNumber,
+    learningStyle: data.learningStyle,
+  };
+
+  return user;
+}
+
+@Controller(&#x27;users&#x27;)
+export class UserController {
+  constructor(private userService: UserService) {}
+
+  @UseGuards(JwtAuthGuard)
+  @Get(&#x27;profile&#x27;)
+  async getProfile(@User() user) {
+    try {
+      const u &#x3D; await this.userService.profile(user.id);
+      return { success: true, data: { ...formatUserResponseData(u) } };
+    } catch (err) {
+      throw new NotFoundException(err.message);
+    }
+  }
+
+  @Post(&#x27;register&#x27;)
+  @UsePipes(new JoiValidationPipe(createUserSchema))
+  async register(@Body() body: UserDetails) {
+    try {
+      const createdUser &#x3D; await this.userService.createUser(body);
+      return {
+        success: true,
+        data: { ...formatUserResponseData(createdUser) },
+      };
+    } catch (error) {
+      console.log(error.keyValue);
+      throw new BadRequestException(error);
+    }
+  }
+}
 </code></pre>
     </div>
 </div>

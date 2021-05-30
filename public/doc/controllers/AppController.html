@@ -79,9 +79,6 @@
                                 <a href="#getHello">getHello</a>
                             </li>
                             <li>
-                                <a href="#getProfile">getProfile</a>
-                            </li>
-                            <li>
                                     <span class="modifier">Async</span>
                                 <a href="#getTodos">getTodos</a>
                             </li>
@@ -139,8 +136,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app.controller.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="33"
+                            class="link-to-prism">src/app.controller.ts:33</a></div>
                 </td>
             </tr>
 
@@ -151,79 +148,6 @@
                     <div class="io-description">
                         <b>Returns : </b>    <code>{ message: string; }</code>
 
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getProfile"></a>
-                    <span class="name">
-                        <b>
-                            getProfile
-                        </b>
-                        <a href="#getProfile"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getProfile(user)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@UseGuards(JwtAuthGuard)<br />@Get(&#x27;profile&#x27;)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/app.controller.ts:58</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>user</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                    </div>
-                    <div class="io-description">
-                        
                     </div>
                 </td>
             </tr>
@@ -260,8 +184,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="63"
-                            class="link-to-prism">src/app.controller.ts:63</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app.controller.ts:62</a></div>
                 </td>
             </tr>
 
@@ -308,8 +232,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app.controller.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="39"
+                            class="link-to-prism">src/app.controller.ts:39</a></div>
                 </td>
             </tr>
 
@@ -383,8 +307,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/app.controller.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="45"
+                            class="link-to-prism">src/app.controller.ts:45</a></div>
                 </td>
             </tr>
 
@@ -466,7 +390,6 @@ import { User } from &#x27;decotators/user.decorator&#x27;;
 import { AppService } from &#x27;./app.service&#x27;;
 import { Express } from &#x27;express&#x27;;
 import { UserService } from &#x27;user/user.service&#x27;;
-import { CreateMaterialDto } from &#x27;user/schemas/files.schema&#x27;;
 import { diskStorage } from &#x27;multer&#x27;;
 
 @Controller()
@@ -501,11 +424,11 @@ export class AppController {
     return &#x27;upload file&#x27;;
   }
 
-  @UseGuards(JwtAuthGuard)
-  @Get(&#x27;profile&#x27;)
-  getProfile(@User() user) {
-    return user;
-  }
+  // @UseGuards(JwtAuthGuard)
+  // @Get(&#x27;profile&#x27;)
+  // getProfile(@User() user) {
+  //   return user;
+  // }
 
   @Get(&#x27;todos&#x27;)
   async getTodos() {

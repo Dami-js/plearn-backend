@@ -46,11 +46,11 @@
 </g>
 <g id="clust13" class="cluster">
 <title>cluster_FeedModule</title>
-<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="682,-70 682,-138 832,-138 832,-70 682,-70"/>
+<polygon fill="none" stroke="black" stroke-dasharray="1,5" points="598,-70 598,-138 905,-138 905,-70 598,-70"/>
 </g>
 <g id="clust18" class="cluster">
 <title>cluster_FeedModule_providers</title>
-<polygon fill="none" stroke="black" points="690,-78 690,-130 824,-130 824,-78 690,-78"/>
+<polygon fill="none" stroke="black" points="606,-78 606,-130 897,-130 897,-78 606,-78"/>
 </g>
 <g id="clust19" class="cluster">
 <title>cluster_UserModule</title>
@@ -91,8 +91,8 @@
 <!-- AuthModule&#45;&gt;AuthService  -->
 <g id="edge6" class="edge">
 <title>AuthModule&#45;&gt;AuthService </title>
-<path fill="none" stroke="black" stroke-dasharray="5,2" d="M714.06,-256C709.18,-256 705.93,-256 705.93,-256 705.93,-256 705.93,-180 705.93,-180 705.93,-180 545.79,-180 545.79,-180"/>
-<polygon fill="black" stroke="black" points="545.79,-176.5 535.79,-180 545.79,-183.5 545.79,-176.5"/>
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M714.41,-256C706.99,-256 701.62,-256 701.62,-256 701.62,-256 701.62,-180 701.62,-180 701.62,-180 545.92,-180 545.92,-180"/>
+<polygon fill="black" stroke="black" points="545.92,-176.5 535.92,-180 545.92,-183.5 545.92,-176.5"/>
 </g>
 <!-- FeedModule -->
 <g id="node2" class="node">
@@ -103,8 +103,8 @@
 <!-- FeedModule&#45;&gt;AppModule -->
 <g id="edge2" class="edge">
 <title>FeedModule&#45;&gt;AppModule</title>
-<path fill="none" stroke="black" d="M800.68,-180C805.53,-180 808.77,-180 808.77,-180 808.77,-180 808.77,-292.86 808.77,-292.86"/>
-<polygon fill="black" stroke="black" points="805.27,-292.86 808.77,-302.86 812.27,-292.86 805.27,-292.86"/>
+<path fill="none" stroke="black" d="M800.68,-180C806.16,-180 809.89,-180 809.89,-180 809.89,-180 809.89,-292.86 809.89,-292.86"/>
+<polygon fill="black" stroke="black" points="806.39,-292.86 809.89,-302.86 813.39,-292.86 806.39,-292.86"/>
 </g>
 <!-- UserModule -->
 <g id="node3" class="node">
@@ -125,13 +125,13 @@
 <polygon fill="black" stroke="black" points="823.06,-292.92 826.56,-302.93 830.06,-292.93 823.06,-292.92"/>
 </g>
 <!-- UserService  -->
-<g id="node11" class="node">
+<g id="node12" class="node">
 <title>UserService </title>
 <polygon fill="#fb8072" stroke="black" points="1171.9,-274 1084.1,-274 1084.1,-238 1171.9,-238 1171.9,-274"/>
 <text text-anchor="middle" x="1128" y="-251.8" font-family="Times,serif" font-size="14.00">UserService </text>
 </g>
 <!-- UserModule&#45;&gt;UserService  -->
-<g id="edge11" class="edge">
+<g id="edge12" class="edge">
 <title>UserModule&#45;&gt;UserService </title>
 <path fill="none" stroke="black" stroke-dasharray="5,2" d="M904.19,-180C979.76,-180 1128,-180 1128,-180 1128,-180 1128,-227.99 1128,-227.99"/>
 <polygon fill="black" stroke="black" points="1124.5,-227.99 1128,-237.99 1131.5,-227.99 1124.5,-227.99"/>
@@ -187,23 +187,35 @@
 <!-- FeedService -->
 <g id="node10" class="node">
 <title>FeedService</title>
-<ellipse fill="#fdb462" stroke="black" cx="757" cy="-104" rx="58.53" ry="18"/>
-<text text-anchor="middle" x="757" y="-99.8" font-family="Times,serif" font-size="14.00">FeedService</text>
+<ellipse fill="#fdb462" stroke="black" cx="830" cy="-104" rx="58.53" ry="18"/>
+<text text-anchor="middle" x="830" y="-99.8" font-family="Times,serif" font-size="14.00">FeedService</text>
 </g>
 <!-- FeedService&#45;&gt;FeedModule -->
 <g id="edge10" class="edge">
 <title>FeedService&#45;&gt;FeedModule</title>
-<path fill="none" stroke="black" d="M757,-122.01C757,-122.01 757,-151.85 757,-151.85"/>
-<polygon fill="black" stroke="black" points="753.5,-151.85 757,-161.85 760.5,-151.85 753.5,-151.85"/>
+<path fill="none" stroke="black" d="M785.81,-115.88C785.81,-115.88 785.81,-151.99 785.81,-151.99"/>
+<polygon fill="black" stroke="black" points="782.31,-151.99 785.81,-161.99 789.31,-151.99 782.31,-151.99"/>
+</g>
+<!-- PaginateModel -->
+<g id="node11" class="node">
+<title>PaginateModel</title>
+<ellipse fill="#fdb462" stroke="black" cx="684" cy="-104" rx="69.5" ry="18"/>
+<text text-anchor="middle" x="684" y="-99.8" font-family="Times,serif" font-size="14.00">PaginateModel</text>
+</g>
+<!-- PaginateModel&#45;&gt;FeedModule -->
+<g id="edge11" class="edge">
+<title>PaginateModel&#45;&gt;FeedModule</title>
+<path fill="none" stroke="black" d="M733.56,-116.89C733.56,-116.89 733.56,-151.91 733.56,-151.91"/>
+<polygon fill="black" stroke="black" points="730.06,-151.91 733.56,-161.91 737.06,-151.91 730.06,-151.91"/>
 </g>
 <!-- UserService -->
-<g id="node12" class="node">
+<g id="node13" class="node">
 <title>UserService</title>
 <ellipse fill="#fdb462" stroke="black" cx="1002" cy="-256" rx="58.44" ry="18"/>
 <text text-anchor="middle" x="1002" y="-251.8" font-family="Times,serif" font-size="14.00">UserService</text>
 </g>
 <!-- UserService&#45;&gt;UserModule -->
-<g id="edge12" class="edge">
+<g id="edge13" class="edge">
 <title>UserService&#45;&gt;UserModule</title>
 <path fill="none" stroke="black" d="M946.87,-250C909.7,-250 867.41,-250 867.41,-250 867.41,-250 867.41,-208.03 867.41,-208.03"/>
 <polygon fill="black" stroke="black" points="870.91,-208.03 867.41,-198.03 863.91,-208.03 870.91,-208.03"/>

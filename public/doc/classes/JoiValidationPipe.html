@@ -27,7 +27,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content injectable">
+               <div class="content class">
                    <div class="content-data">
 
 
@@ -36,9 +36,13 @@
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-  <li>Injectables</li>
-  <li>LocalStrategy</li>
+  <li>Classes</li>
+  <li>JoiValidationPipe</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -56,10 +60,17 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/auth/local.strategy.ts</code>
+            <code>src/shared/joiValidation.pipe.ts</code>
         </p>
 
 
+
+            <p class="comment">
+                <h3>Implements</h3>
+            </p>
+            <p class="comment">
+                            <code><a href="https://angular.io/api/core/PipeTransform" target="_blank" >PipeTransform</a></code>
+            </p>
 
 
             <section>
@@ -76,8 +87,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#validate">validate</a>
+                                <a href="#transform">transform</a>
                             </li>
                         </ul>
                     </td>
@@ -97,12 +107,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(authService: <a href="../injectables/AuthService.html">AuthService</a>)</code>
+<code>constructor(schema: ObjectSchema)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/auth/local.strategy.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/shared/joiValidation.pipe.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -120,10 +130,10 @@
                                         </thead>
                                         <tbody>
                                                 <tr>
-                                                        <td>authService</td>
+                                                        <td>schema</td>
                                                   
                                                         <td>
-                                                                        <code><a href="../injectables/AuthService.html" target="_self" >AuthService</a></code>
+                                                                    <code>ObjectSchema</code>
                                                         </td>
                                                   
                                                     <td>
@@ -140,6 +150,7 @@
         </table>
 </section>
 
+
             <section>
     
     <h3 id="methods">
@@ -149,28 +160,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="validate"></a>
+                    <a name="transform"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Async</span>
-                            validate
+                            transform
                         </b>
-                        <a href="#validate"><span class="icon ion-ios-link"></span></a>
+                        <a href="#transform"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>validate(username: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>transform(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, metadata: ArgumentMetadata)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/auth/local.strategy.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="11"
+                            class="link-to-prism">src/shared/joiValidation.pipe.ts:11</a></div>
                 </td>
             </tr>
 
@@ -190,9 +199,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>username</td>
+                                    <td>value</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
 
                                     <td>
@@ -202,9 +211,9 @@
 
                                 </tr>
                                 <tr>
-                                    <td>password</td>
+                                    <td>metadata</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <code>ArgumentMetadata</code>
                                     </td>
 
                                     <td>
@@ -219,7 +228,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -231,39 +240,35 @@
     </table>
 </section>
 
+
+
+
+
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, UnauthorizedException } from &#x27;@nestjs/common&#x27;;
-import { PassportStrategy } from &#x27;@nestjs/passport&#x27;;
-import { Strategy } from &#x27;passport-local&#x27;;
-import { User } from &#x27;user/user.service&#x27;;
-import { AuthService } from &#x27;./auth.service&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  ArgumentMetadata,
+  BadRequestException,
+  PipeTransform,
+} from &#x27;@nestjs/common&#x27;;
+import { ObjectSchema } from &#x27;joi&#x27;;
 
-@Injectable()
-export class LocalStrategy extends PassportStrategy(Strategy) {
-  constructor(private authService: AuthService) {
-    super();
-  }
+export class JoiValidationPipe implements PipeTransform {
+  constructor(private schema: ObjectSchema) {}
 
-  async validate(username: string, password: string) {
-    const user &#x3D; await this.authService.validateUser(username, password);
-
-    if (!user) {
-      throw new UnauthorizedException(&#x27;Incorrect username or password&#x27;);
+  transform(value: any, metadata: ArgumentMetadata) {
+    const { error } &#x3D; this.schema.validate(value);
+    if (error) {
+      throw new BadRequestException(error.message);
     }
-    return user;
+    return value;
   }
 }
 </code></pre>
     </div>
-
 </div>
-
-
-
-
 
 
 
@@ -288,8 +293,8 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'LocalStrategy.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'class';
+            var COMPODOC_CURRENT_PAGE_URL = 'JoiValidationPipe.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

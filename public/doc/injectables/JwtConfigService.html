@@ -269,7 +269,7 @@ export class JwtConfigService implements JwtOptionsFactory {
     return {
       secret: this.configService.get(&#x27;jwtSecret&#x27;),
       signOptions: {
-        expiresIn: &#x27;60s&#x27;,
+        expiresIn: &#x27;1hr&#x27;,
       },
     };
   }

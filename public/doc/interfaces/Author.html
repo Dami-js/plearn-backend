@@ -85,6 +85,7 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
+                                            <span class="modifier">Optional</span>
                                         <a href="#coursesCreated">coursesCreated</a>
                                 </li>
                                 <li>
@@ -124,6 +125,11 @@
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -168,20 +174,22 @@
 
 export interface User {
   _id?: string;
-  surname: string;
   firstname: string;
-  othernames: string;
+  lastname: string;
   email: string;
+  password: string;
+  isStudent: boolean;
 }
 
 export interface Author extends User {
   title: string;
-  coursesCreated: Array&lt;Course&gt;;
+  coursesCreated?: Array&lt;Course&gt;;
 }
 
 export interface Learner extends User {
+  level: string;
   studentNumber: string;
-  learningStyle: string;
+  learningStyle?: string;
 }
 </code></pre>
     </div>

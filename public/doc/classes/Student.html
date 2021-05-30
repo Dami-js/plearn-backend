@@ -92,16 +92,22 @@
                                 <a href="#firstname">firstname</a>
                             </li>
                             <li>
+                                <a href="#isStudent">isStudent</a>
+                            </li>
+                            <li>
+                                <a href="#lastname">lastname</a>
+                            </li>
+                            <li>
                                 <a href="#learningStyle">learningStyle</a>
                             </li>
                             <li>
-                                <a href="#othernames">othernames</a>
+                                <a href="#level">level</a>
+                            </li>
+                            <li>
+                                <a href="#password">password</a>
                             </li>
                             <li>
                                 <a href="#studentNumber">studentNumber</a>
-                            </li>
-                            <li>
-                                <a href="#surname">surname</a>
                             </li>
                         </ul>
                     </td>
@@ -145,7 +151,7 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Prop()<br />
+                                @Prop({unique: true})<br />
                             </code>
                         </td>
                     </tr>
@@ -167,6 +173,78 @@
                             <b>
                             firstname</b>
                             <a href="#firstname"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Prop()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/user/schemas/student.schema.ts:10</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="isStudent"></a>
+                        <span class="name">
+                            <b>
+                            isStudent</b>
+                            <a href="#isStudent"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Prop()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/user/schemas/student.schema.ts:28</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="lastname"></a>
+                        <span class="name">
+                            <b>
+                            lastname</b>
+                            <a href="#lastname"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -234,11 +312,11 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="othernames"></a>
+                        <a name="level"></a>
                         <span class="name">
                             <b>
-                            othernames</b>
-                            <a href="#othernames"><span class="icon ion-ios-link"></span></a>
+                            level</b>
+                            <a href="#level"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -270,6 +348,42 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="password"></a>
+                        <span class="name">
+                            <b>
+                            password</b>
+                            <a href="#password"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <b>Decorators : </b>
+                            <br />
+                            <code>
+                                @Prop()<br />
+                            </code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">src/user/schemas/student.schema.ts:31</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="studentNumber"></a>
                         <span class="name">
                             <b>
@@ -289,49 +403,13 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Prop()<br />
+                                @Prop({unique: true})<br />
                             </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
                                     <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/user/schemas/student.schema.ts:22</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="surname"></a>
-                        <span class="name">
-                            <b>
-                            surname</b>
-                            <a href="#surname"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <b>Decorators : </b>
-                            <br />
-                            <code>
-                                @Prop()<br />
-                            </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/user/schemas/student.schema.ts:10</a></div>
                             </td>
                         </tr>
 
@@ -359,25 +437,37 @@ export type StudentDocument &#x3D; Student &amp; Document;
 @Schema()
 export class Student implements Learner {
   @Prop()
-  surname: string;
-
-  @Prop()
   firstname: string;
 
   @Prop()
-  othernames: string;
+  lastname: string;
 
   @Prop()
+  level: string;
+
+  @Prop({ unique: true })
   email: string;
 
-  @Prop()
+  @Prop({ unique: true })
   studentNumber: string;
 
   @Prop()
   learningStyle: string;
+
+  @Prop()
+  isStudent: boolean;
+
+  @Prop()
+  password: string;
 }
 
-export const StudentSchema &#x3D; SchemaFactory.createForClass(Student);
+const StudentSchema &#x3D; SchemaFactory.createForClass(Student);
+
+StudentSchema.virtual(&#x27;fullName&#x27;).get(function () {
+  return &#x60;${this.firstname} ${this.surname} ${this.othernames}&#x60;;
+});
+
+export { StudentSchema };
 </code></pre>
     </div>
 </div>

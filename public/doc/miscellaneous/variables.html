@@ -61,10 +61,16 @@
                             <a href="#CONFIG_MODULE_OPTIONS" title="src/config/constants.ts"><b>CONFIG_MODULE_OPTIONS</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
                         </li>
                         <li>
+                            <a href="#createUserSchema" title="src/user/schemas/validation/create-user.schema.ts"><b>createUserSchema</b>&nbsp;&nbsp;&nbsp;(src/.../create-user.schema.ts)</a>
+                        </li>
+                        <li>
                             <a href="#FeedSchema" title="src/feed/schemas/feed.schema.ts"><b>FeedSchema</b>&nbsp;&nbsp;&nbsp;(src/.../feed.schema.ts)</a>
                         </li>
                         <li>
                             <a href="#filename" title="src/config/configuration.ts"><b>filename</b>&nbsp;&nbsp;&nbsp;(src/.../configuration.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#hashPassword" title="src/shared/hashing.ts"><b>hashPassword</b>&nbsp;&nbsp;&nbsp;(src/.../hashing.ts)</a>
                         </li>
                         <li>
                             <a href="#MaterialSchema" title="src/user/schemas/files.schema.ts"><b>MaterialSchema</b>&nbsp;&nbsp;&nbsp;(src/.../files.schema.ts)</a>
@@ -79,6 +85,9 @@
                             <a href="#modules" title="src/config/modules.ts"><b>modules</b>&nbsp;&nbsp;&nbsp;(src/.../modules.ts)</a>
                         </li>
                         <li>
+                            <a href="#mongooseModelFactories" title="src/config/mongooseModelFactories.ts"><b>mongooseModelFactories</b>&nbsp;&nbsp;&nbsp;(src/.../mongooseModelFactories.ts)</a>
+                        </li>
+                        <li>
                             <a href="#StudentSchema" title="src/user/schemas/student.schema.ts"><b>StudentSchema</b>&nbsp;&nbsp;&nbsp;(src/.../student.schema.ts)</a>
                         </li>
                         <li>
@@ -86,6 +95,9 @@
                         </li>
                         <li>
                             <a href="#User" title="src/decotators/user.decorator.ts"><b>User</b>&nbsp;&nbsp;&nbsp;(src/.../user.decorator.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#validatePassword" title="src/shared/hashing.ts"><b>validatePassword</b>&nbsp;&nbsp;&nbsp;(src/.../hashing.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -120,6 +132,39 @@
   isGlobal: true,
   load: [configuration],
 }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/user/schemas/validation/create-user.schema.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createUserSchema"></a>
+                        <span class="name">
+                            <b>
+                            createUserSchema</b>
+                            <a href="#createUserSchema"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>Joi.object&lt;CreateStudentDto&gt;().keys({
+  email: Joi.string().email().required(),
+  firstname: Joi.string().required(),
+  lastname: Joi.string().required(),
+  level: Joi.string().required(),
+  password: Joi.string().min(6).required(),
+  learningStyle: Joi.string(),
+  isStudent: Joi.boolean().required(),
+  studentNumber: Joi.string().required(),
+})</code>
                         </td>
                     </tr>
 
@@ -168,6 +213,62 @@
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(str: string) &#x3D;&gt; _.split(str, &#x27;.&#x27;)[0]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/shared/hashing.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="hashPassword"></a>
+                        <span class="name">
+                            <b>
+                            hashPassword</b>
+                            <a href="#hashPassword"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>async (password: string): Promise&lt;string&gt; &#x3D;&gt; {
+  const saltRounds &#x3D; 10;
+  const salt &#x3D; await bcrypt.genSalt(saltRounds);
+  const hash &#x3D; await bcrypt.hash(password, salt);
+  return hash;
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="validatePassword"></a>
+                        <span class="name">
+                            <b>
+                            validatePassword</b>
+                            <a href="#validatePassword"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>async (
+  password: string,
+  hashed: string,
+): Promise&lt;boolean&gt; &#x3D;&gt; {
+  const match &#x3D; await bcrypt.compare(password, hashed);
+  return match;
+}</code>
                         </td>
                     </tr>
 
@@ -261,6 +362,10 @@
     name: Material.name,
     schema: MaterialSchema,
   },
+  {
+    name: Student.name,
+    schema: StudentSchema,
+  },
 ]</code>
                         </td>
                     </tr>
@@ -297,6 +402,7 @@
     imports: [ConfigModule],
     useClass: MongooseConfigService,
   }),
+  MongooseModule.forFeatureAsync(mongooseModelFactories),
   MulterModule.registerAsync({
     imports: [ConfigModule],
     useClass: MulterConfigService,
@@ -305,6 +411,45 @@
   AuthModule,
   UserModule,
   HttpModule,
+]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/config/mongooseModelFactories.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="mongooseModelFactories"></a>
+                        <span class="name">
+                            <b>
+                            mongooseModelFactories</b>
+                            <a href="#mongooseModelFactories"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>AsyncModelFactory[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[
+  {
+    name: Student.name,
+    useFactory: () &#x3D;&gt; {
+      const schema &#x3D; StudentSchema;
+      schema.plugin(require(&#x27;mongoose-beautiful-unique-validation&#x27;));
+      return schema;
+    },
+  },
 ]</code>
                         </td>
                     </tr>

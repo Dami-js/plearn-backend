@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>User</li>
+  <li>CollationDocument</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/user/interfaces/user.interface.ts</code>
+            <code>src/providers/PaginateModel.provider.ts</code>
         </p>
 
 
@@ -79,23 +79,28 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                            <span class="modifier">Optional</span>
-                                        <a href="#_id">_id</a>
+                                        <a href="#alternate">alternate</a>
                                 </li>
                                 <li>
-                                        <a href="#email">email</a>
+                                        <a href="#backwards">backwards</a>
                                 </li>
                                 <li>
-                                        <a href="#firstname">firstname</a>
+                                        <a href="#caseFirst">caseFirst</a>
                                 </li>
                                 <li>
-                                        <a href="#isStudent">isStudent</a>
+                                        <a href="#caseLevel">caseLevel</a>
                                 </li>
                                 <li>
-                                        <a href="#lastname">lastname</a>
+                                        <a href="#locale">locale</a>
                                 </li>
                                 <li>
-                                        <a href="#password">password</a>
+                                        <a href="#maxVariable">maxVariable</a>
+                                </li>
+                                <li>
+                                        <a href="#numericOrdering">numericOrdering</a>
+                                </li>
+                                <li>
+                                        <a href="#strength">strength</a>
                                 </li>
                             </ul>
                         </td>
@@ -112,47 +117,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="_id"></a>
-                                        <span class="name"><b>_id</b><a href="#_id"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="alternate"></a>
+                                        <span class="name"><b>alternate</b><a href="#alternate"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>_id:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="email"></a>
-                                        <span class="name"><b>email</b><a href="#email"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>email:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>alternate:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -175,42 +146,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="firstname"></a>
-                                        <span class="name"><b>firstname</b><a href="#firstname"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="backwards"></a>
+                                        <span class="name"><b>backwards</b><a href="#backwards"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>firstname:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="isStudent"></a>
-                                        <span class="name"><b>isStudent</b><a href="#isStudent"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>isStudent:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>backwards:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -233,13 +175,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="lastname"></a>
-                                        <span class="name"><b>lastname</b><a href="#lastname"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="caseFirst"></a>
+                                        <span class="name"><b>caseFirst</b><a href="#caseFirst"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>lastname:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>caseFirst:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -262,13 +204,42 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="password"></a>
-                                        <span class="name"><b>password</b><a href="#password"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="caseLevel"></a>
+                                        <span class="name"><b>caseLevel</b><a href="#caseLevel"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>password:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>caseLevel:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="locale"></a>
+                                        <span class="name"><b>locale</b><a href="#locale"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>locale:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -287,31 +258,202 @@
 
                         </tbody>
                     </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="maxVariable"></a>
+                                        <span class="name"><b>maxVariable</b><a href="#maxVariable"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>maxVariable:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="numericOrdering"></a>
+                                        <span class="name"><b>numericOrdering</b><a href="#numericOrdering"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>numericOrdering:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="strength"></a>
+                                        <span class="name"><b>strength</b><a href="#strength"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>strength:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
             </section>
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Course } from &#x27;feed/interfaces/feed.interface&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
+import { FilterQuery, Document, Model } from &#x27;mongoose&#x27;;
 
-export interface User {
-  _id?: string;
-  firstname: string;
-  lastname: string;
-  email: string;
-  password: string;
-  isStudent: boolean;
+export interface CollationDocument {
+  locale: string;
+  caseLevel: boolean;
+  caseFirst: string;
+  strength: number;
+  numericOrdering: boolean;
+  alternate: string;
+  maxVariable: string;
+  backwards: boolean;
 }
 
-export interface Author extends User {
-  title: string;
-  coursesCreated?: Array&lt;Course&gt;;
+export interface PopulateOptions {
+  path: any;
+  select: any;
+  model: string | Model&lt;any, {}&gt;;
+  match: any;
 }
 
-export interface Learner extends User {
-  level: string;
-  studentNumber: string;
-  learningStyle?: string;
+export interface PaginateOptions {
+  select?: Object | string;
+  sort?: Object | string;
+  page?: number;
+  limit?: number;
+  pagination?: boolean;
+  collation?: CollationDocument;
+  populate?: PopulateOptions;
+}
+
+export interface PaginationResult {
+  docs: Array&lt;any&gt;;
+  totalDocs: number;
+  limit: number;
+  hasPrevPage: boolean;
+  hasNextPage: boolean;
+  page: number;
+  totalPages: number;
+  prevPage: number | null;
+  nextPage: number | null;
+}
+
+@Injectable()
+export class PaginateModel&lt;T extends Document&gt; {
+  public async paginate(
+    model: Model&lt;any, {}&gt;,
+    query: (FilterQuery&lt;T&gt; &amp; Document) | {},
+    {
+      select &#x3D; {},
+      sort &#x3D; {},
+      page &#x3D; 1,
+      limit &#x3D; 10,
+      pagination &#x3D; true,
+      collation,
+      populate,
+    }: PaginateOptions,
+  ): Promise&lt;PaginationResult&gt; {
+    const startIndex &#x3D; (page - 1) * limit;
+    const endIndex &#x3D; page * limit;
+    const dataLength &#x3D; await model.countDocuments().exec();
+    const results: PaginationResult &#x3D; {
+      docs: [],
+      totalDocs: null,
+      limit,
+      hasPrevPage: startIndex &gt; 0,
+      hasNextPage: endIndex &lt; dataLength,
+      page,
+      totalPages: Math.ceil(dataLength / limit),
+      prevPage: startIndex &gt; 0 ? page - 1 : null,
+      nextPage: endIndex &lt; dataLength ? page + 1 : null,
+    };
+    if (!pagination) {
+      results.docs &#x3D; await model
+        .find({ ...query })
+        .select(select)
+        .sort(sort)
+        .collation(collation)
+        .populate(
+          populate?.path,
+          populate?.select,
+          populate?.model,
+          populate?.match,
+        );
+    } else {
+      results.docs &#x3D; await model
+        .find({ ...query })
+        .select(select)
+        .sort(sort)
+        .collation(collation)
+        .populate(
+          populate?.path,
+          populate?.select,
+          populate?.model,
+          populate?.match,
+        )
+        .limit(limit)
+        .skip(startIndex)
+        .exec();
+    }
+    results.totalDocs &#x3D; results.docs.length;
+
+    return results;
+  }
 }
 </code></pre>
     </div>
@@ -340,7 +482,7 @@ export interface Learner extends User {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'User.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'CollationDocument.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
