@@ -11,7 +11,7 @@ export const createUserSchema = Joi.object<
   password: Joi.string().min(6).required(),
   learningStyle: Joi.string().allow(''),
   isStudent: Joi.boolean().required(),
-  coursesCreated: Joi.array().allow([]),
+  coursesCreated: Joi.array().allow(null),
   title: Joi.string().allow(''),
   studentNumber: Joi.string().required(),
 });
