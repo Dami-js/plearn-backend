@@ -15,6 +15,10 @@ const models: ModelDefinition[] = [
     name: Student.name,
     schema: StudentSchema,
   },
+  {
+    name: Tutor.name,
+    schema: TutorSchema,
+  },
 ];
 
 @Module({
