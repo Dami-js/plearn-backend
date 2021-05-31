@@ -7,7 +7,7 @@ export const createUserSchema = Joi.object<CreateStudentDto>().keys({
   lastname: Joi.string().required(),
   level: Joi.string().required(),
   password: Joi.string().min(6).required(),
-  learningStyle: Joi.string(),
+  learningStyle: Joi.string().allow(''),
   isStudent: Joi.boolean().required(),
   studentNumber: Joi.string().required(),
 });
