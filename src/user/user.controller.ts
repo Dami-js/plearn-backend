@@ -3,22 +3,20 @@ import {
   Body,
   Controller,
   Get,
-  NotAcceptableException,
   NotFoundException,
-  Param,
   Post,
   UseGuards,
   UsePipes,
 } from '@nestjs/common';
 import { JoiValidationPipe } from 'shared/joiValidation.pipe';
 import { UserDetails } from './dto/create-user.dto';
-import { createUserSchema } from './schemas/validation/create-user.schema';
+import {
+  createTutorSchema,
+  createStudentSchema,
+} from './schemas/validation/create-user.schema';
 import { UserService } from './user.service';
-import MongooseError from 'mongoose/lib/error';
 import { JwtAuthGuard } from 'auth/jwt-auth.guard';
 import { User } from 'decotators/user.decorator';
-import { StudentDocument } from './schemas/student.schema';
-import { TutorDocument } from './schemas/tutor.schema';
 
 function formatUserResponseData(data: any): Omit<UserDetails, 'password'> {
   const user: Omit<UserDetails, 'password'> = {
@@ -52,11 +50,26 @@ export class UserController {
     }
   }
 
-  @Post('register')
-  @UsePipes(new JoiValidationPipe(createUserSchema))
-  async register(@Body() body: UserDetails) {
+  @Post('register/student')
+  @UsePipes(new JoiValidationPipe(createStudentSchema))
+  async registerStudent(@Body() body: UserDetails) {
     try {
-      const createdUser = await this.userService.createUser(body);
+      const createdUser = await this.userService.createStudent(body);
+      return {
+        success: true,
+        data: { ...formatUserResponseData(createdUser) },
+      };
+    } catch (error) {
+      console.log(error.keyValue);
+      throw new BadRequestException(error);
+    }
+  }
+
+  @Post('register/tutor')
+  @UsePipes(new JoiValidationPipe(createTutorSchema))
+  async registerTutor(@Body() body: UserDetails) {
+    try {
+      const createdUser = await this.userService.createTutor(body);
       return {
         success: true,
         data: { ...formatUserResponseData(createdUser) },

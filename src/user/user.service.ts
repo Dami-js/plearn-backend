@@ -1,4 +1,4 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { hashPassword } from 'shared/hashing';
@@ -38,12 +38,19 @@ export class UserService {
     }
   }
 
-  async createUser(body: UserDetails): Promise<any> {
+  async createStudent(body: UserDetails): Promise<any> {
     const user = body;
     user.password = await hashPassword(user.password);
-    const newUser = user.isStudent
-      ? new this.studentModel(user)
-      : new this.tutorModel(user);
+    const newUser = new this.studentModel(user);
+    const savedUser = await newUser.save();
+    // const { password, ...u } = newUser;
+    return savedUser;
+  }
+
+  async createTutor(body: UserDetails): Promise<any> {
+    const user = body;
+    user.password = await hashPassword(user.password);
+    const newUser = new this.tutorModel(user);
     const savedUser = await newUser.save();
     // const { password, ...u } = newUser;
     return savedUser;
