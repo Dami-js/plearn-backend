@@ -1,7 +1,9 @@
 import * as Joi from 'joi';
-import { CreateStudentDto } from 'user/dto/create-user.dto';
+import { CreateStudentDto, CreateTutorDto } from 'user/dto/create-user.dto';
 
-export const createUserSchema = Joi.object<CreateStudentDto>().keys({
+export const createUserSchema = Joi.object<
+  CreateStudentDto | CreateTutorDto
+>().keys({
   email: Joi.string().email().required(),
   firstname: Joi.string().required(),
   lastname: Joi.string().required(),
@@ -9,5 +11,7 @@ export const createUserSchema = Joi.object<CreateStudentDto>().keys({
   password: Joi.string().min(6).required(),
   learningStyle: Joi.string().allow(''),
   isStudent: Joi.boolean().required(),
+  coursesCreated: Joi.array().allow([]),
+  title: Joi.string().allow(''),
   studentNumber: Joi.string().required(),
 });
