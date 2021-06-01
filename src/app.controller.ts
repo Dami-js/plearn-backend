@@ -9,16 +9,12 @@ import {
   UseGuards,
   UseInterceptors,
 } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { AuthService } from 'auth/auth.service';
-import { JwtAuthGuard } from 'auth/jwt-auth.guard';
 import { LocalAuthGuard } from 'auth/local-auth.guard';
-import { User } from 'decotators/user.decorator';
 import { AppService } from './app.service';
 import { Express } from 'express';
 import { UserService } from 'user/user.service';
-import { diskStorage } from 'multer';
 
 @Controller()
 export class AppController {

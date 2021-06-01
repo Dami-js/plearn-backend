@@ -5,6 +5,7 @@ import {
   Get,
   NotFoundException,
   Post,
+  UnauthorizedException,
   UseGuards,
   UsePipes,
 } from '@nestjs/common';
@@ -17,6 +18,7 @@ import {
 import { UserService } from './user.service';
 import { JwtAuthGuard } from 'auth/jwt-auth.guard';
 import { User } from 'decotators/user.decorator';
+// import { RolesGaurd } from 'guards/roles.guard';
 
 function formatUserResponseData(data: any): Omit<UserDetails, 'password'> {
   const user: Omit<UserDetails, 'password'> = {
@@ -43,7 +45,7 @@ export class UserController {
   @Get('profile')
   async getProfile(@User() user) {
     try {
-      const u = await this.userService.profile(user.id);
+      const u = await this.userService.profile(user);
       return { success: true, data: { ...formatUserResponseData(u) } };
     } catch (err) {
       throw new NotFoundException(err.message);
@@ -61,7 +63,7 @@ export class UserController {
       };
     } catch (error) {
       console.log(error.keyValue);
-      throw new BadRequestException(error);
+      throw new BadRequestException(error.message);
     }
   }
 
@@ -75,8 +77,27 @@ export class UserController {
         data: { ...formatUserResponseData(createdUser) },
       };
     } catch (error) {
-      console.log(error.keyValue);
-      throw new BadRequestException(error);
+      throw new BadRequestException(error.message);
+    }
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post('learning-style')
+  async determineLearningStyle(@Body() body, @User() user) {
+    try {
+      if (!user.isStudent) {
+        throw new UnauthorizedException('Only student are allowed');
+      }
+      const updatedUser = await this.userService.determine({
+        answers: body.answers,
+        user,
+      });
+      return {
+        success: true,
+        data: { ...formatUserResponseData(updatedUser) },
+      };
+    } catch (error) {
+      throw new BadRequestException(error.message);
     }
   }
 }

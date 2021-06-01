@@ -17,7 +17,7 @@ export const createTutorSchema = Joi.object<CreateTutorDto>().keys({
   firstname: Joi.string().required(),
   lastname: Joi.string().required(),
   password: Joi.string().min(6).required(),
-  isStudent: Joi.boolean().required(),
+  isStudent: Joi.boolean().required().only().allow(false),
   coursesCreated: Joi.array().allow(null),
-  title: Joi.string().allow(''),
+  title: Joi.string().required(),
 });

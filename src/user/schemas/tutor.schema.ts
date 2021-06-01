@@ -17,7 +17,7 @@ export class Tutor implements Author {
   @Prop()
   password: string;
 
-  @Prop()
+  @Prop({ unique: true })
   email: string;
 
   @Prop()

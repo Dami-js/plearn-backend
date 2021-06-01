@@ -16,9 +16,13 @@ import { JwtModuleOptions, JwtOptionsFactory } from '@nestjs/jwt';
 // config contants
 export default () => ({
   port: parseInt(process.env.PORT, 10) || 5000,
-  database: process.env.MONGODB_URI,
+  database:
+    process.env.ENVIRONMENT === 'development'
+      ? process.env.MONGODB_URI_DEV
+      : process.env.MONGODB_URI,
   upload_path: './public/upload',
   jwtSecret: process.env.JWTSECRET,
+  environment: process.env.ENVIRONMENT,
 });
 
 // get filename of file

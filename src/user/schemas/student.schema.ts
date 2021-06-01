@@ -21,8 +21,8 @@ export class Student implements Learner {
   @Prop({ unique: true })
   studentNumber: string;
 
-  @Prop()
-  learningStyle: string;
+  @Prop([String])
+  learningStyle: Array<string>;
 
   @Prop()
   isStudent: boolean;

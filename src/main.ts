@@ -17,7 +17,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('Plearn Api Documentation')
     .setDescription('Plearn API description')
-    .setVersion('1.0')
+    .setVersion('1.1')
     .addTag('student ')
     .build();
   const document = SwaggerModule.createDocument(app, config);
