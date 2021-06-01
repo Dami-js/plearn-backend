@@ -77,7 +77,15 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#createUser">createUser</a>
+                                <a href="#createStudent">createStudent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createTutor">createTutor</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#determine">determine</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -109,12 +117,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(materialModel: <a href="../classes/Material.html">Model<MaterialDocument></a>, studentModel: <a href="../classes/Student.html">Model<StudentDocument></a>)</code>
+<code>constructor(materialModel: <a href="../classes/Material.html">Model<MaterialDocument></a>, studentModel: <a href="../classes/Student.html">Model<StudentDocument></a>, tutorModel: <a href="../classes/Tutor.html">Model<TutorDocument></a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/user/user.service.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/user/user.service.ts:25</a></div>
                             </td>
                         </tr>
 
@@ -155,6 +163,18 @@
                                                     </td>
                                                     
                                                 </tr>
+                                                <tr>
+                                                        <td>tutorModel</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../classes/Tutor.html" target="_self" >Model&lt;TutorDocument&gt;</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -173,28 +193,28 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="createUser"></a>
+                    <a name="createStudent"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            createUser
+                            createStudent
                         </b>
-                        <a href="#createUser"><span class="icon ion-ios-link"></span></a>
+                        <a href="#createStudent"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>createUser(body: <a href="../interfaces/User.html">UserDetails</a>)</code>
+                    <code>createStudent(body: <a href="../interfaces/User.html">UserDetails</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/user/user.service.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="60"
+                            class="link-to-prism">src/user/user.service.ts:60</a></div>
                 </td>
             </tr>
 
@@ -245,6 +265,150 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="createTutor"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            createTutor
+                        </b>
+                        <a href="#createTutor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createTutor(body: <a href="../interfaces/User.html">UserDetails</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="88"
+                            class="link-to-prism">src/user/user.service.ts:88</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >UserDetails</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="determine"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            determine
+                        </b>
+                        <a href="#determine"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>determine(body: <a href="../interfaces/QuestionnaireBody.html">QuestionnaireBody</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="112"
+                            class="link-to-prism">src/user/user.service.ts:112</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../interfaces/QuestionnaireBody.html" target="_self" >QuestionnaireBody</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="findOne"></a>
                     <span class="name">
                         <b>
@@ -265,8 +429,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="22"
-                            class="link-to-prism">src/user/user.service.ts:22</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/user/user.service.ts:32</a></div>
                 </td>
             </tr>
 
@@ -330,15 +494,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>profile(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <code>profile(undefined: literal type)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/user/user.service.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/user/user.service.ts:46</a></div>
                 </td>
             </tr>
 
@@ -358,9 +522,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>id</td>
                                     <td>
-                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                            <code>literal type</code>
                                     </td>
 
                                     <td>
@@ -409,8 +572,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">src/user/user.service.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="107"
+                            class="link-to-prism">src/user/user.service.ts:107</a></div>
                 </td>
             </tr>
 
@@ -459,13 +622,14 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Inject, Injectable } from &#x27;@nestjs/common&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
 import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
 import { Model } from &#x27;mongoose&#x27;;
 import { hashPassword } from &#x27;shared/hashing&#x27;;
 import { UserDetails } from &#x27;./dto/create-user.dto&#x27;;
 import { Material, MaterialDocument } from &#x27;./schemas/files.schema&#x27;;
 import { Student, StudentDocument } from &#x27;./schemas/student.schema&#x27;;
+import { Tutor, TutorDocument } from &#x27;./schemas/tutor.schema&#x27;;
 
 export type User &#x3D; {
   userId: number;
@@ -473,42 +637,146 @@ export type User &#x3D; {
   password: string;
 };
 
+export interface QuestionnaireBody {
+  answers: Array&lt;string&gt;;
+  user: {
+    id: string;
+    studentNumber: string;
+  };
+}
+
 @Injectable()
 export class UserService {
   constructor(
     @InjectModel(Material.name) private materialModel: Model&lt;MaterialDocument&gt;,
     @InjectModel(Student.name) private studentModel: Model&lt;StudentDocument&gt;,
+    @InjectModel(Tutor.name) private tutorModel: Model&lt;TutorDocument&gt;,
   ) {}
 
   async findOne(username: string): Promise&lt;StudentDocument | undefined&gt; {
-    const user &#x3D; await this.studentModel
-      .findOne({ studentNumber: username })
-      .exec();
-
+    const emailPattern &#x3D; /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    const isEmail &#x3D; emailPattern.test(username);
+    let user &#x3D; null;
+    if (isEmail) {
+      user &#x3D; await this.tutorModel.findOne({ email: username }).exec();
+    } else {
+      user &#x3D; await this.studentModel
+        .findOne({ studentNumber: username })
+        .exec();
+    }
     return user;
   }
 
-  async profile(id: string) {
+  async profile({ id, isStudent }: { id: string; isStudent: boolean }) {
     try {
-      const user &#x3D; await this.studentModel.findById(id);
+      let user &#x3D; null;
+      if (!isStudent) {
+        user &#x3D; await this.tutorModel.findById(id);
+      } else {
+        user &#x3D; await this.studentModel.findById(id);
+      }
       return user;
     } catch (error) {
       console.log(error);
     }
   }
 
-  async createUser(body: UserDetails): Promise&lt;any&gt; {
+  async createStudent(body: UserDetails): Promise&lt;any&gt; {
     const user &#x3D; body;
-    user.password &#x3D; await hashPassword(user.password);
-    const newUser &#x3D; new this.studentModel(user);
-    const savedUser &#x3D; await newUser.save();
-    // const { password, ...u } &#x3D; newUser;
-    return savedUser;
+    try {
+      user.password &#x3D; await hashPassword(user.password);
+      const existingUserByEmail &#x3D; await this.studentModel
+        .findOne({ email: user.email })
+        .exec();
+      if (existingUserByEmail) {
+        throw new Error(&#x60;A user with this email (${user.email}) exist&#x60;);
+      }
+      const existingUserByStudentNumber &#x3D; await this.studentModel
+        .findOne({ studentNumber: user.studentNumber })
+        .exec();
+      if (existingUserByStudentNumber) {
+        throw new Error(
+          &#x60;A user with this number (${user.studentNumber}) exist&#x60;,
+        );
+      }
+
+      const newUser &#x3D; new this.studentModel(user);
+      const savedUser &#x3D; await newUser.save();
+      // const { password, ...u } &#x3D; newUser;
+      return savedUser;
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+  async createTutor(body: UserDetails): Promise&lt;any&gt; {
+    const user &#x3D; body;
+    try {
+      user.password &#x3D; await hashPassword(user.password);
+      const existingUserByEmail &#x3D; await this.tutorModel
+        .findOne({ email: user.email })
+        .exec();
+      if (existingUserByEmail) {
+        throw new Error(&#x60;A user with this email (${user.email}) exist&#x60;);
+      }
+      const newUser &#x3D; new this.tutorModel(user);
+      const savedUser &#x3D; await newUser.save();
+      // const { password, ...u } &#x3D; newUser;
+      return savedUser;
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   async uploadFile(body) {
     const newFile &#x3D; new this.materialModel(body);
     return newFile;
+  }
+
+  async determine(body: QuestionnaireBody) {
+    const { answers, user } &#x3D; body;
+
+    const learningStyle &#x3D; [];
+
+    const formattedAnswers &#x3D; answers.map((i) &#x3D;&gt; Number(i));
+    const activistAnswers &#x3D; formattedAnswers.slice(0, 8);
+    const pragmatistAnswers &#x3D; formattedAnswers.slice(9, 17);
+    const reflectorAnswers &#x3D; formattedAnswers.slice(18, 26);
+    const theoristAnswers &#x3D; formattedAnswers.slice(27, 35);
+
+    const getSum &#x3D; (ans: number[]) &#x3D;&gt;
+      ans.reduce((prev, current) &#x3D;&gt; prev + current);
+
+    const activistSum &#x3D; getSum(activistAnswers);
+
+    const pragmatistSum &#x3D; getSum(pragmatistAnswers);
+
+    const reflectorSum &#x3D; getSum(reflectorAnswers);
+
+    const theoristSum &#x3D; getSum(theoristAnswers);
+
+    const _r &#x3D; [activistSum, pragmatistSum, reflectorSum, theoristSum];
+    const learningStyles &#x3D; [&#x27;activist&#x27;, &#x27;pragmatist&#x27;, &#x27;reflector&#x27;, &#x27;theorist&#x27;];
+
+    if (_r[0] &gt; _r[1] &amp;&amp; _r[0] &gt; _r[2] &amp;&amp; _r[0] &gt; _r[3]) {
+      learningStyle.push(&#x27;activist&#x27;);
+    } else if (_r[1] &gt; _r[0] &amp;&amp; _r[1] &gt; _r[2] &amp;&amp; _r[1] &gt; _r[3]) {
+      learningStyle.push(&#x27;pragmatist&#x27;);
+    } else if (_r[2] &gt; _r[0] &amp;&amp; _r[2] &gt; _r[1] &amp;&amp; _r[2] &gt; _r[3]) {
+      learningStyle.push(&#x27;reflector&#x27;);
+    } else if (_r[3] &gt; _r[0] &amp;&amp; _r[3] &gt; _r[1] &amp;&amp; _r[3] &gt; _r[2]) {
+      learningStyle.push(&#x27;theorist&#x27;);
+    } else {
+      _r.forEach((i, index) &#x3D;&gt; {
+        if (_r[index] &#x3D;&#x3D; _r[index + 1]) {
+          learningStyle.push(learningStyles[index], learningStyles[index + 1]);
+        }
+        return;
+      });
+    }
+
+    await this.studentModel.updateOne({ _id: user.id }, { learningStyle });
+    return await this.studentModel.findOne({ _id: user.id }).exec();
   }
 }
 </code></pre>

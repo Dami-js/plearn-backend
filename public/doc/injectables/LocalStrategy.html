@@ -102,7 +102,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/auth/local.strategy.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/auth/local.strategy.ts:7</a></div>
                             </td>
                         </tr>
 
@@ -169,8 +169,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="13"
-                            class="link-to-prism">src/auth/local.strategy.ts:13</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/auth/local.strategy.ts:12</a></div>
                 </td>
             </tr>
 
@@ -238,7 +238,6 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable, UnauthorizedException } from &#x27;@nestjs/common&#x27;;
 import { PassportStrategy } from &#x27;@nestjs/passport&#x27;;
 import { Strategy } from &#x27;passport-local&#x27;;
-import { User } from &#x27;user/user.service&#x27;;
 import { AuthService } from &#x27;./auth.service&#x27;;
 
 @Injectable()
@@ -249,7 +248,6 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
 
   async validate(username: string, password: string) {
     const user &#x3D; await this.authService.validateUser(username, password);
-
     if (!user) {
       throw new UnauthorizedException(&#x27;Incorrect username or password&#x27;);
     }

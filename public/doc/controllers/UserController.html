@@ -83,11 +83,19 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#determineLearningStyle">determineLearningStyle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#getProfile">getProfile</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
-                                <a href="#register">register</a>
+                                <a href="#registerStudent">registerStudent</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#registerTutor">registerTutor</a>
                             </li>
                         </ul>
                     </td>
@@ -106,6 +114,90 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="determineLearningStyle"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            determineLearningStyle
+                        </b>
+                        <a href="#determineLearningStyle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>determineLearningStyle(body, user)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@UseGuards(JwtAuthGuard)<br />@Post(&#x27;learning-style&#x27;)<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">src/user/user.controller.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>user</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -185,20 +277,20 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="register"></a>
+                    <a name="registerStudent"></a>
                     <span class="name">
                         <b>
                             <span class="modifier">Async</span>
-                            register
+                            registerStudent
                         </b>
-                        <a href="#register"><span class="icon ion-ios-link"></span></a>
+                        <a href="#registerStudent"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>register(body: <a href="../interfaces/User.html">UserDetails</a>)</code>
+                    <code>registerStudent(body: <a href="../interfaces/User.html">UserDetails</a>)</code>
                 </td>
             </tr>
 
@@ -206,7 +298,7 @@
                 <td class="col-md-4">
                     <b>Decorators : </b>
                     <br />
-                    <code>@Post(&#x27;register&#x27;)<br />@UsePipes(new JoiValidationPipe())<br /></code>
+                    <code>@Post(&#x27;register/student&#x27;)<br />@UsePipes(new JoiValidationPipe())<br /></code>
                 </td>
             </tr>
 
@@ -214,6 +306,85 @@
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="57"
                             class="link-to-prism">src/user/user.controller.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../interfaces/User.html" target="_self" >UserDetails</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="registerTutor"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            registerTutor
+                        </b>
+                        <a href="#registerTutor"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>registerTutor(body: <a href="../interfaces/User.html">UserDetails</a>)</code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <b>Decorators : </b>
+                    <br />
+                    <code>@Post(&#x27;register/tutor&#x27;)<br />@UsePipes(new JoiValidationPipe())<br /></code>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/user/user.controller.ts:72</a></div>
                 </td>
             </tr>
 
@@ -269,22 +440,22 @@
   Body,
   Controller,
   Get,
-  NotAcceptableException,
   NotFoundException,
-  Param,
   Post,
+  UnauthorizedException,
   UseGuards,
   UsePipes,
 } from &#x27;@nestjs/common&#x27;;
 import { JoiValidationPipe } from &#x27;shared/joiValidation.pipe&#x27;;
 import { UserDetails } from &#x27;./dto/create-user.dto&#x27;;
-import { createUserSchema } from &#x27;./schemas/validation/create-user.schema&#x27;;
+import {
+  createTutorSchema,
+  createStudentSchema,
+} from &#x27;./schemas/validation/create-user.schema&#x27;;
 import { UserService } from &#x27;./user.service&#x27;;
-import MongooseError from &#x27;mongoose/lib/error&#x27;;
 import { JwtAuthGuard } from &#x27;auth/jwt-auth.guard&#x27;;
 import { User } from &#x27;decotators/user.decorator&#x27;;
-import { StudentDocument } from &#x27;./schemas/student.schema&#x27;;
-import { TutorDocument } from &#x27;./schemas/tutor.schema&#x27;;
+// import { RolesGaurd } from &#x27;guards/roles.guard&#x27;;
 
 function formatUserResponseData(data: any): Omit&lt;UserDetails, &#x27;password&#x27;&gt; {
   const user: Omit&lt;UserDetails, &#x27;password&#x27;&gt; &#x3D; {
@@ -311,25 +482,59 @@ export class UserController {
   @Get(&#x27;profile&#x27;)
   async getProfile(@User() user) {
     try {
-      const u &#x3D; await this.userService.profile(user.id);
+      const u &#x3D; await this.userService.profile(user);
       return { success: true, data: { ...formatUserResponseData(u) } };
     } catch (err) {
       throw new NotFoundException(err.message);
     }
   }
 
-  @Post(&#x27;register&#x27;)
-  @UsePipes(new JoiValidationPipe(createUserSchema))
-  async register(@Body() body: UserDetails) {
+  @Post(&#x27;register/student&#x27;)
+  @UsePipes(new JoiValidationPipe(createStudentSchema))
+  async registerStudent(@Body() body: UserDetails) {
     try {
-      const createdUser &#x3D; await this.userService.createUser(body);
+      const createdUser &#x3D; await this.userService.createStudent(body);
       return {
         success: true,
         data: { ...formatUserResponseData(createdUser) },
       };
     } catch (error) {
       console.log(error.keyValue);
-      throw new BadRequestException(error);
+      throw new BadRequestException(error.message);
+    }
+  }
+
+  @Post(&#x27;register/tutor&#x27;)
+  @UsePipes(new JoiValidationPipe(createTutorSchema))
+  async registerTutor(@Body() body: UserDetails) {
+    try {
+      const createdUser &#x3D; await this.userService.createTutor(body);
+      return {
+        success: true,
+        data: { ...formatUserResponseData(createdUser) },
+      };
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
+  }
+
+  @UseGuards(JwtAuthGuard)
+  @Post(&#x27;learning-style&#x27;)
+  async determineLearningStyle(@Body() body, @User() user) {
+    try {
+      if (!user.isStudent) {
+        throw new UnauthorizedException(&#x27;Only student are allowed&#x27;);
+      }
+      const updatedUser &#x3D; await this.userService.determine({
+        answers: body.answers,
+        user,
+      });
+      return {
+        success: true,
+        data: { ...formatUserResponseData(updatedUser) },
+      };
+    } catch (error) {
+      throw new BadRequestException(error.message);
     }
   }
 }

@@ -61,7 +61,10 @@
                             <a href="#CONFIG_MODULE_OPTIONS" title="src/config/constants.ts"><b>CONFIG_MODULE_OPTIONS</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
                         </li>
                         <li>
-                            <a href="#createUserSchema" title="src/user/schemas/validation/create-user.schema.ts"><b>createUserSchema</b>&nbsp;&nbsp;&nbsp;(src/.../create-user.schema.ts)</a>
+                            <a href="#createStudentSchema" title="src/user/schemas/validation/create-user.schema.ts"><b>createStudentSchema</b>&nbsp;&nbsp;&nbsp;(src/.../create-user.schema.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#createTutorSchema" title="src/user/schemas/validation/create-user.schema.ts"><b>createTutorSchema</b>&nbsp;&nbsp;&nbsp;(src/.../create-user.schema.ts)</a>
                         </li>
                         <li>
                             <a href="#FeedSchema" title="src/feed/schemas/feed.schema.ts"><b>FeedSchema</b>&nbsp;&nbsp;&nbsp;(src/.../feed.schema.ts)</a>
@@ -145,11 +148,11 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="createUserSchema"></a>
+                        <a name="createStudentSchema"></a>
                         <span class="name">
                             <b>
-                            createUserSchema</b>
-                            <a href="#createUserSchema"><span class="icon ion-ios-link"></span></a>
+                            createStudentSchema</b>
+                            <a href="#createStudentSchema"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
@@ -161,9 +164,38 @@
   lastname: Joi.string().required(),
   level: Joi.string().required(),
   password: Joi.string().min(6).required(),
-  learningStyle: Joi.string(),
+  learningStyle: Joi.string().allow(&#x27;&#x27;),
   isStudent: Joi.boolean().required(),
   studentNumber: Joi.string().required(),
+})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createTutorSchema"></a>
+                        <span class="name">
+                            <b>
+                            createTutorSchema</b>
+                            <a href="#createTutorSchema"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>Joi.object&lt;CreateTutorDto&gt;().keys({
+  email: Joi.string().email().required(),
+  firstname: Joi.string().required(),
+  lastname: Joi.string().required(),
+  password: Joi.string().min(6).required(),
+  isStudent: Joi.boolean().required().only().allow(false),
+  coursesCreated: Joi.array().allow(null),
+  title: Joi.string().required(),
 })</code>
                         </td>
                     </tr>
@@ -365,6 +397,10 @@
   {
     name: Student.name,
     schema: StudentSchema,
+  },
+  {
+    name: Tutor.name,
+    schema: TutorSchema,
   },
 ]</code>
                         </td>

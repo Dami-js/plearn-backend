@@ -136,8 +136,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app.controller.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="29"
+                            class="link-to-prism">src/app.controller.ts:29</a></div>
                 </td>
             </tr>
 
@@ -184,8 +184,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="62"
-                            class="link-to-prism">src/app.controller.ts:62</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app.controller.ts:58</a></div>
                 </td>
             </tr>
 
@@ -232,8 +232,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="39"
-                            class="link-to-prism">src/app.controller.ts:39</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app.controller.ts:35</a></div>
                 </td>
             </tr>
 
@@ -307,8 +307,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app.controller.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app.controller.ts:41</a></div>
                 </td>
             </tr>
 
@@ -381,16 +381,12 @@
   UseGuards,
   UseInterceptors,
 } from &#x27;@nestjs/common&#x27;;
-import { AuthGuard } from &#x27;@nestjs/passport&#x27;;
 import { FileInterceptor } from &#x27;@nestjs/platform-express&#x27;;
 import { AuthService } from &#x27;auth/auth.service&#x27;;
-import { JwtAuthGuard } from &#x27;auth/jwt-auth.guard&#x27;;
 import { LocalAuthGuard } from &#x27;auth/local-auth.guard&#x27;;
-import { User } from &#x27;decotators/user.decorator&#x27;;
 import { AppService } from &#x27;./app.service&#x27;;
 import { Express } from &#x27;express&#x27;;
 import { UserService } from &#x27;user/user.service&#x27;;
-import { diskStorage } from &#x27;multer&#x27;;
 
 @Controller()
 export class AppController {

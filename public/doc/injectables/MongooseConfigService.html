@@ -106,7 +106,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/config/configuration.ts:32</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/config/configuration.ts:36</a></div>
                             </td>
                         </tr>
 
@@ -171,8 +171,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/config/configuration.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/config/configuration.ts:38</a></div>
                 </td>
             </tr>
 
@@ -212,9 +212,13 @@ import { JwtModuleOptions, JwtOptionsFactory } from &#x27;@nestjs/jwt&#x27;;
 // config contants
 export default () &#x3D;&gt; ({
   port: parseInt(process.env.PORT, 10) || 5000,
-  database: process.env.MONGODB_URI,
+  database:
+    process.env.ENVIRONMENT &#x3D;&#x3D;&#x3D; &#x27;development&#x27;
+      ? process.env.MONGODB_URI_DEV
+      : process.env.MONGODB_URI,
   upload_path: &#x27;./public/upload&#x27;,
   jwtSecret: process.env.JWTSECRET,
+  environment: process.env.ENVIRONMENT,
 });
 
 // get filename of file

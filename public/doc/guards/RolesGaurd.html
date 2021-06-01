@@ -27,7 +27,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content injectable">
+               <div class="content guard">
                    <div class="content-data">
 
 
@@ -36,9 +36,11 @@
 
 
 
+
+
 <ol class="breadcrumb">
-  <li>Injectables</li>
-  <li>JwtStrategy</li>
+    <li>Guards</li>
+    <li>RolesGaurd</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -51,18 +53,19 @@
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info">
-        <p class="comment">
+        <div class="tab-pane fade active in" id="c-info">
+            <p class="comment">
             <h3>File</h3>
-        </p>
-        <p class="comment">
-            <code>src/auth/jwt.strategy.ts</code>
-        </p>
+            </p>
+            <p class="comment">
+                <code>src/guards/roles.guard.ts</code>
+            </p>
 
 
 
 
-            <section>
+
+                <section>
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -76,8 +79,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#validate">validate</a>
+                                <a href="#canActivate">canActivate</a>
                             </li>
                         </ul>
                     </td>
@@ -91,56 +93,8 @@
     </table>
 </section>
 
-            <section>
-    <h3 id="constructor">Constructor</h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-<code>constructor(configService: ConfigService)</code>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/auth/jwt.strategy.ts:7</a></div>
-                            </td>
-                        </tr>
 
-                <tr>
-                    <td class="col-md-4">
-                            <div>
-                                    <b>Parameters :</b>
-                                    <table class="params">
-                                        <thead>
-                                            <tr>
-                                                <td>Name</td>
-                                                    <td>Type</td>
-                                                <td>Optional</td>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                                <tr>
-                                                        <td>configService</td>
-                                                  
-                                                        <td>
-                                                                    <code>ConfigService</code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            No
-                                                    </td>
-                                                    
-                                                </tr>
-                                        </tbody>
-                                    </table>
-                            </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-</section>
-
-            <section>
+                <section>
     
     <h3 id="methods">
         Methods
@@ -149,28 +103,26 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="validate"></a>
+                    <a name="canActivate"></a>
                     <span class="name">
                         <b>
-                            <span class="modifier">Async</span>
-                            validate
+                            canActivate
                         </b>
-                        <a href="#validate"><span class="icon ion-ios-link"></span></a>
+                        <a href="#canActivate"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>validate(payload: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>canActivate(context: ExecutionContext)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="16"
-                            class="link-to-prism">src/auth/jwt.strategy.ts:16</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="6"
+                            class="link-to-prism">src/guards/roles.guard.ts:6</a></div>
                 </td>
             </tr>
 
@@ -190,9 +142,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>payload</td>
+                                    <td>context</td>
                                     <td>
-                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <code>ExecutionContext</code>
                                     </td>
 
                                     <td>
@@ -207,7 +159,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
+                        <b>Returns : </b>    <code>boolean | Promise | Observable</code>
 
                     </div>
                     <div class="io-description">
@@ -218,36 +170,26 @@
         </tbody>
     </table>
 </section>
+        </div>
 
-    </div>
 
-
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { ConfigService } from &#x27;@nestjs/config&#x27;;
-import { PassportStrategy } from &#x27;@nestjs/passport&#x27;;
-import { ExtractJwt, Strategy } from &#x27;passport-jwt&#x27;;
+        <div class="tab-pane fade  tab-source-code" id="c-source">
+            <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { CanActivate, ExecutionContext, Injectable } from &#x27;@nestjs/common&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
 
 @Injectable()
-export class JwtStrategy extends PassportStrategy(Strategy) {
-  constructor(private configService: ConfigService) {
-    super({
-      jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      ignoreExpiration: false,
-      secretOrKey: process.env.JWTSECRET,
-    });
-  }
-
-  async validate(payload: any) {
-    return { id: payload.id, isStudent: payload.isStudent };
+export class RolesGaurd implements CanActivate {
+  canActivate(
+    context: ExecutionContext,
+  ): boolean | Promise&lt;boolean&gt; | Observable&lt;boolean&gt; {
+    const request &#x3D; context.switchToHttp().getRequest();
+    console.log(request.body);
+    return true;
   }
 }
 </code></pre>
-    </div>
-
+        </div>
 </div>
-
-
 
 
 
@@ -274,8 +216,8 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
-            var COMPODOC_CURRENT_PAGE_URL = 'JwtStrategy.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'guard';
+            var COMPODOC_CURRENT_PAGE_URL = 'RolesGaurd.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

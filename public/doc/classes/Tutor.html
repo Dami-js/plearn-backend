@@ -184,7 +184,7 @@
                             <b>Decorators : </b>
                             <br />
                             <code>
-                                @Prop()<br />
+                                @Prop({unique: true})<br />
                             </code>
                         </td>
                     </tr>
@@ -408,7 +408,7 @@ export class Tutor implements Author {
   @Prop()
   password: string;
 
-  @Prop()
+  @Prop({ unique: true })
   email: string;
 
   @Prop()
