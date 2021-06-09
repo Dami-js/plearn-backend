@@ -403,12 +403,22 @@ export interface PaginationResult {
   nextPage: number | null;
 }
 
+export interface PaginateModelArgs&lt;T&gt; {
+  model: Model&lt;any, {}&gt;;
+  query?: (FilterQuery&lt;T&gt; &amp; Document) | {};
+  options?: PaginateOptions;
+}
+
+// model: Model&lt;any, {}&gt;,
+// query?: (FilterQuery&lt;T&gt; &amp; Document) | {},
+// options: PaginateOptions &#x3D; {},
+
 @Injectable()
 export class PaginateModel&lt;T extends Document&gt; {
-  public async paginate(
-    model: Model&lt;any, {}&gt;,
-    query: (FilterQuery&lt;T&gt; &amp; Document) | {},
-    {
+  public async paginate(args: PaginateModelArgs&lt;T&gt;): Promise&lt;PaginationResult&gt; {
+    const { model, query, options &#x3D; {} } &#x3D; args;
+
+    const {
       select &#x3D; {},
       sort &#x3D; {},
       page &#x3D; 1,
@@ -416,8 +426,7 @@ export class PaginateModel&lt;T extends Document&gt; {
       pagination &#x3D; true,
       collation,
       populate,
-    }: PaginateOptions,
-  ): Promise&lt;PaginationResult&gt; {
+    } &#x3D; options;
     const startIndex &#x3D; (page - 1) * limit;
     const endIndex &#x3D; page * limit;
     const dataLength &#x3D; await model.countDocuments().exec();

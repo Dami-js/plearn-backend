@@ -1,5 +1,5 @@
 export interface IFeedController {
-  getFeeds: () => Promise<any[]>;
-  getFeed: () => Promise<any>;
-  deleteFeed: () => Promise<boolean>;
+  getFeeds: (queries: { q: string; learningStyle: string }) => Promise<any[]>;
+  getFeed: (params: { title: string }) => Promise<any>;
+  removeFeed: (id: string) => Promise<any>;
 }

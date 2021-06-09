@@ -86,10 +86,6 @@
                                     <span class="modifier">Async</span>
                                 <a href="#login">login</a>
                             </li>
-                            <li>
-                                    <span class="modifier">Async</span>
-                                <a href="#upload">upload</a>
-                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -136,8 +132,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app.controller.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/app.controller.ts:24</a></div>
                 </td>
             </tr>
 
@@ -184,8 +180,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="58"
-                            class="link-to-prism">src/app.controller.ts:58</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app.controller.ts:35</a></div>
                 </td>
             </tr>
 
@@ -232,8 +228,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="35"
-                            class="link-to-prism">src/app.controller.ts:35</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="30"
+                            class="link-to-prism">src/app.controller.ts:30</a></div>
                 </td>
             </tr>
 
@@ -276,116 +272,21 @@
             </tr>
         </tbody>
     </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="upload"></a>
-                    <span class="name">
-                        <b>
-                            <span class="modifier">Async</span>
-                            upload
-                        </b>
-                        <a href="#upload"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>upload(body, file: Express.Multer.File)</code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <b>Decorators : </b>
-                    <br />
-                    <code>@Post(&#x27;upload&#x27;)<br />@UseInterceptors(undefined)<br /></code>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="41"
-                            class="link-to-prism">src/app.controller.ts:41</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>body</td>
-                                    <td>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>file</td>
-                                    <td>
-                                            <code>Express.Multer.File</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                    <div class="io-description">
-                        <b>Returns : </b>    <code>{}</code>
-
-                    </div>
-                    <div class="io-description">
-                        
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </section>    </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  Body,
   Controller,
   Get,
   Post,
   Render,
   Request,
-  UploadedFile,
   UseGuards,
-  UseInterceptors,
 } from &#x27;@nestjs/common&#x27;;
-import { FileInterceptor } from &#x27;@nestjs/platform-express&#x27;;
 import { AuthService } from &#x27;auth/auth.service&#x27;;
 import { LocalAuthGuard } from &#x27;auth/local-auth.guard&#x27;;
 import { AppService } from &#x27;./app.service&#x27;;
-import { Express } from &#x27;express&#x27;;
 import { UserService } from &#x27;user/user.service&#x27;;
 
 @Controller()
@@ -407,24 +308,6 @@ export class AppController {
   async login(@Request() req) {
     return this.authService.login(req.user);
   }
-
-  @Post(&#x27;upload&#x27;)
-  @UseInterceptors(FileInterceptor(&#x27;file&#x27;))
-  async upload(@Body() body, @UploadedFile() file: Express.Multer.File) {
-    console.log(file, body);
-    // const body: CreateMaterialDto &#x3D; {
-
-    // }
-    // const result &#x3D; this.userService.uploadFile()
-
-    return &#x27;upload file&#x27;;
-  }
-
-  // @UseGuards(JwtAuthGuard)
-  // @Get(&#x27;profile&#x27;)
-  // getProfile(@User() user) {
-  //   return user;
-  // }
 
   @Get(&#x27;todos&#x27;)
   async getTodos() {

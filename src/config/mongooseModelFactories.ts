@@ -1,5 +1,3 @@
-// import * as mongoosePaginate from 'mongoose-paginate-v2';
-import { Feed, FeedSchema } from 'feed/schemas/feed.schema';
 import { AsyncModelFactory } from '@nestjs/mongoose';
 import { Student, StudentSchema } from 'user/schemas/student.schema';
 

@@ -61,6 +61,9 @@
                             <a href="#CONFIG_MODULE_OPTIONS" title="src/config/constants.ts"><b>CONFIG_MODULE_OPTIONS</b>&nbsp;&nbsp;&nbsp;(src/.../constants.ts)</a>
                         </li>
                         <li>
+                            <a href="#createFeedSchema" title="src/feed/schemas/validation/create-feed.schema.ts"><b>createFeedSchema</b>&nbsp;&nbsp;&nbsp;(src/.../create-feed.schema.ts)</a>
+                        </li>
+                        <li>
                             <a href="#createStudentSchema" title="src/user/schemas/validation/create-user.schema.ts"><b>createStudentSchema</b>&nbsp;&nbsp;&nbsp;(src/.../create-user.schema.ts)</a>
                         </li>
                         <li>
@@ -70,7 +73,13 @@
                             <a href="#FeedSchema" title="src/feed/schemas/feed.schema.ts"><b>FeedSchema</b>&nbsp;&nbsp;&nbsp;(src/.../feed.schema.ts)</a>
                         </li>
                         <li>
-                            <a href="#filename" title="src/config/configuration.ts"><b>filename</b>&nbsp;&nbsp;&nbsp;(src/.../configuration.ts)</a>
+                            <a href="#getFilename" title="src/config/configuration.ts"><b>getFilename</b>&nbsp;&nbsp;&nbsp;(src/.../configuration.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#getFilename" title="src/shared/handleFileStorage.ts"><b>getFilename</b>&nbsp;&nbsp;&nbsp;(src/.../handleFileStorage.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#handleFileStorage" title="src/shared/handleFileStorage.ts"><b>handleFileStorage</b>&nbsp;&nbsp;&nbsp;(src/.../handleFileStorage.ts)</a>
                         </li>
                         <li>
                             <a href="#hashPassword" title="src/shared/hashing.ts"><b>hashPassword</b>&nbsp;&nbsp;&nbsp;(src/.../hashing.ts)</a>
@@ -135,6 +144,39 @@
   isGlobal: true,
   load: [configuration],
 }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/feed/schemas/validation/create-feed.schema.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="createFeedSchema"></a>
+                        <span class="name">
+                            <b>
+                            createFeedSchema</b>
+                            <a href="#createFeedSchema"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>Joi.object&lt;Course&gt;().keys({
+  title: Joi.string().required(),
+  course: Joi.string().required(),
+  courseCode: Joi.string().required(),
+  level: Joi.string().required(),
+  unit: Joi.string().required(),
+  content: Joi.string().required(),
+  learningStyle: Joi.string().required(),
+  createdBy: Joi.string().required(),
+})</code>
                         </td>
                     </tr>
 
@@ -234,17 +276,78 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="filename"></a>
+                        <a name="getFilename"></a>
                         <span class="name">
                             <b>
-                            filename</b>
-                            <a href="#filename"><span class="icon ion-ios-link"></span></a>
+                            getFilename</b>
+                            <a href="#getFilename"><span class="icon ion-ios-link"></span></a>
                         </span>
                     </td>
                 </tr>
                     <tr>
                         <td class="col-md-4">
                             <i>Default value : </i><code>(str: string) &#x3D;&gt; _.split(str, &#x27;.&#x27;)[0]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/shared/handleFileStorage.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="getFilename"></a>
+                        <span class="name">
+                            <b>
+                            getFilename</b>
+                            <a href="#getFilename"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(str: string) &#x3D;&gt; _.split(str, &#x27;.&#x27;)[0]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="handleFileStorage"></a>
+                        <span class="name">
+                            <b>
+                            handleFileStorage</b>
+                            <a href="#handleFileStorage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  storage: (destination &#x3D; &#x27;./public/upload&#x27;) &#x3D;&gt; {
+    return diskStorage({
+      destination,
+      filename: (req, file, cb) &#x3D;&gt; {
+        const name &#x3D; getFilename(file.originalname);
+        return cb(null, &#x60;${name}${extname(file.originalname)}&#x60;);
+      },
+    });
+  },
+}</code>
                         </td>
                     </tr>
 

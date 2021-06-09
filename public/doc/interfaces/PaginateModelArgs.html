@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>PaginationResult</li>
+  <li>PaginateModelArgs</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -79,31 +79,15 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#docs">docs</a>
+                                        <a href="#model">model</a>
                                 </li>
                                 <li>
-                                        <a href="#hasNextPage">hasNextPage</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#options">options</a>
                                 </li>
                                 <li>
-                                        <a href="#hasPrevPage">hasPrevPage</a>
-                                </li>
-                                <li>
-                                        <a href="#limit">limit</a>
-                                </li>
-                                <li>
-                                        <a href="#nextPage">nextPage</a>
-                                </li>
-                                <li>
-                                        <a href="#page">page</a>
-                                </li>
-                                <li>
-                                        <a href="#prevPage">prevPage</a>
-                                </li>
-                                <li>
-                                        <a href="#totalDocs">totalDocs</a>
-                                </li>
-                                <li>
-                                        <a href="#totalPages">totalPages</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#query">query</a>
                                 </li>
                             </ul>
                         </td>
@@ -120,13 +104,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="docs"></a>
-                                        <span class="name"><b>docs</b><a href="#docs"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="model"></a>
+                                        <span class="name"><b>model</b><a href="#model"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>docs:     <code>Array&lt;any&gt;</code>
+                                        <code>model:     <code>Model&lt;any | literal type&gt;</code>
 </code>
                                     </td>
                                 </tr>
@@ -134,7 +118,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+                                            <i>Type : </i>    <code>Model&lt;any | literal type&gt;</code>
 
                                         </td>
                                     </tr>
@@ -149,13 +133,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="hasNextPage"></a>
-                                        <span class="name"><b>hasNextPage</b><a href="#hasNextPage"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="options"></a>
+                                        <span class="name"><b>options</b><a href="#options"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>hasNextPage:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>options:         <code><a href="../interfaces/PaginateOptions.html" target="_self" >PaginateOptions</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -163,11 +147,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="../interfaces/PaginateOptions.html" target="_self" >PaginateOptions</a></code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -178,13 +167,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="hasPrevPage"></a>
-                                        <span class="name"><b>hasPrevPage</b><a href="#hasPrevPage"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="query"></a>
+                                        <span class="name"><b>query</b><a href="#query"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>hasPrevPage:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>query:     <code> | literal type</code>
 </code>
                                     </td>
                                 </tr>
@@ -192,185 +181,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>    <code> | literal type</code>
 
                                         </td>
                                     </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="limit"></a>
-                                        <span class="name"><b>limit</b><a href="#limit"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>limit:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
+                                            <i>Optional</i>
                                         </td>
                                     </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="nextPage"></a>
-                                        <span class="name"><b>nextPage</b><a href="#nextPage"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>nextPage:     <code>number | null</code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>number | null</code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="page"></a>
-                                        <span class="name"><b>page</b><a href="#page"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>page:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="prevPage"></a>
-                                        <span class="name"><b>prevPage</b><a href="#prevPage"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>prevPage:     <code>number | null</code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>    <code>number | null</code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="totalDocs"></a>
-                                        <span class="name"><b>totalDocs</b><a href="#totalDocs"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>totalDocs:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="totalPages"></a>
-                                        <span class="name"><b>totalPages</b><a href="#totalPages"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>totalPages:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
-
-                                        </td>
-                                    </tr>
-
 
 
 
@@ -523,7 +343,7 @@ export class PaginateModel&lt;T extends Document&gt; {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'PaginationResult.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PaginateModelArgs.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -26,7 +26,7 @@ export default () => ({
 });
 
 // get filename of file
-const filename = (str: string) => _.split(str, '.')[0];
+export const getFilename = (str: string) => _.split(str, '.')[0];
 
 /**
  * @class MongooseConfigService
@@ -38,6 +38,9 @@ export class MongooseConfigService implements MongooseOptionsFactory {
   createMongooseOptions(): MongooseModuleOptions {
     return {
       uri: this.configService.get<string>('database'),
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
     };
   }
 }
@@ -56,7 +59,7 @@ export class MulterConfigService implements MulterOptionsFactory {
       storage: diskStorage({
         destination: this.configService.get<string>('upload_path'),
         filename: (req, file, cb) => {
-          const name = filename(file.originalname);
+          const name = getFilename(file.originalname);
           return cb(null, `${name}${extname(file.originalname)}`);
         },
       }),

@@ -266,6 +266,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Course.html" data-type="entity-link">Course</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/CreateFeedDTO.html" data-type="entity-link">CreateFeedDTO</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/CreateStudentDto.html" data-type="entity-link">CreateStudentDto</a>
                             </li>
                             <li class="link">
@@ -278,6 +281,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Feed.html" data-type="entity-link">Feed</a>
                             </li>
                             <li class="link">
+                                <a href="interfaces/FetchArg.html" data-type="entity-link">FetchArg</a>
+                            </li>
+                            <li class="link">
                                 <a href="interfaces/IFeedController.html" data-type="entity-link">IFeedController</a>
                             </li>
                             <li class="link">
@@ -285,6 +291,9 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="interfaces/Learner.html" data-type="entity-link">Learner</a>
+                            </li>
+                            <li class="link">
+                                <a href="interfaces/PaginateModelArgs.html" data-type="entity-link">PaginateModelArgs</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/PaginateOptions.html" data-type="entity-link">PaginateOptions</a>

@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>PaginationResult</li>
+  <li>CreateFeedDTO</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/providers/PaginateModel.provider.ts</code>
+            <code>src/feed/dto/create-feed.dto.ts</code>
         </p>
 
 
@@ -79,31 +79,37 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#docs">docs</a>
+                                        <a href="#content">content</a>
                                 </li>
                                 <li>
-                                        <a href="#hasNextPage">hasNextPage</a>
+                                        <a href="#course">course</a>
                                 </li>
                                 <li>
-                                        <a href="#hasPrevPage">hasPrevPage</a>
+                                        <a href="#courseCode">courseCode</a>
                                 </li>
                                 <li>
-                                        <a href="#limit">limit</a>
+                                        <a href="#createdAt">createdAt</a>
                                 </li>
                                 <li>
-                                        <a href="#nextPage">nextPage</a>
+                                        <a href="#createdBy">createdBy</a>
                                 </li>
                                 <li>
-                                        <a href="#page">page</a>
+                                        <a href="#learningStyle">learningStyle</a>
                                 </li>
                                 <li>
-                                        <a href="#prevPage">prevPage</a>
+                                        <a href="#level">level</a>
                                 </li>
                                 <li>
-                                        <a href="#totalDocs">totalDocs</a>
+                                        <a href="#material">material</a>
                                 </li>
                                 <li>
-                                        <a href="#totalPages">totalPages</a>
+                                        <a href="#thumbnail">thumbnail</a>
+                                </li>
+                                <li>
+                                        <a href="#title">title</a>
+                                </li>
+                                <li>
+                                        <a href="#unit">unit</a>
                                 </li>
                             </ul>
                         </td>
@@ -120,13 +126,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="docs"></a>
-                                        <span class="name"><b>docs</b><a href="#docs"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="content"></a>
+                                        <span class="name"><b>content</b><a href="#content"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>docs:     <code>Array&lt;any&gt;</code>
+                                        <code>content:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -134,7 +140,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>Array&lt;any&gt;</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -149,13 +155,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="hasNextPage"></a>
-                                        <span class="name"><b>hasNextPage</b><a href="#hasNextPage"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="course"></a>
+                                        <span class="name"><b>course</b><a href="#course"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>hasNextPage:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>course:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -163,7 +169,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -178,13 +184,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="hasPrevPage"></a>
-                                        <span class="name"><b>hasPrevPage</b><a href="#hasPrevPage"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="courseCode"></a>
+                                        <span class="name"><b>courseCode</b><a href="#courseCode"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>hasPrevPage:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                        <code>courseCode:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -192,7 +198,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -207,13 +213,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="limit"></a>
-                                        <span class="name"><b>limit</b><a href="#limit"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="createdAt"></a>
+                                        <span class="name"><b>createdAt</b><a href="#createdAt"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>limit:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>createdAt:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -221,7 +227,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
 
                                         </td>
                                     </tr>
@@ -236,13 +242,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="nextPage"></a>
-                                        <span class="name"><b>nextPage</b><a href="#nextPage"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="createdBy"></a>
+                                        <span class="name"><b>createdBy</b><a href="#createdBy"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>nextPage:     <code>number | null</code>
+                                        <code>createdBy:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -250,7 +256,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>number | null</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -265,13 +271,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="page"></a>
-                                        <span class="name"><b>page</b><a href="#page"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="learningStyle"></a>
+                                        <span class="name"><b>learningStyle</b><a href="#learningStyle"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>page:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>learningStyle:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -279,7 +285,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -294,13 +300,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="prevPage"></a>
-                                        <span class="name"><b>prevPage</b><a href="#prevPage"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="level"></a>
+                                        <span class="name"><b>level</b><a href="#level"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>prevPage:     <code>number | null</code>
+                                        <code>level:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -308,7 +314,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>number | null</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -323,13 +329,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="totalDocs"></a>
-                                        <span class="name"><b>totalDocs</b><a href="#totalDocs"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="material"></a>
+                                        <span class="name"><b>material</b><a href="#material"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>totalDocs:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>material:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -337,7 +343,7 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -352,13 +358,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="totalPages"></a>
-                                        <span class="name"><b>totalPages</b><a href="#totalPages"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="thumbnail"></a>
+                                        <span class="name"><b>thumbnail</b><a href="#thumbnail"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>totalPages:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                        <code>thumbnail:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -366,7 +372,65 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="title"></a>
+                                        <span class="name"><b>title</b><a href="#title"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>title:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="unit"></a>
+                                        <span class="name"><b>unit</b><a href="#unit"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>unit:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
@@ -382,119 +446,18 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { FilterQuery, Document, Model } from &#x27;mongoose&#x27;;
-
-export interface CollationDocument {
-  locale: string;
-  caseLevel: boolean;
-  caseFirst: string;
-  strength: number;
-  numericOrdering: boolean;
-  alternate: string;
-  maxVariable: string;
-  backwards: boolean;
-}
-
-export interface PopulateOptions {
-  path: any;
-  select: any;
-  model: string | Model&lt;any, {}&gt;;
-  match: any;
-}
-
-export interface PaginateOptions {
-  select?: Object | string;
-  sort?: Object | string;
-  page?: number;
-  limit?: number;
-  pagination?: boolean;
-  collation?: CollationDocument;
-  populate?: PopulateOptions;
-}
-
-export interface PaginationResult {
-  docs: Array&lt;any&gt;;
-  totalDocs: number;
-  limit: number;
-  hasPrevPage: boolean;
-  hasNextPage: boolean;
-  page: number;
-  totalPages: number;
-  prevPage: number | null;
-  nextPage: number | null;
-}
-
-export interface PaginateModelArgs&lt;T&gt; {
-  model: Model&lt;any, {}&gt;;
-  query?: (FilterQuery&lt;T&gt; &amp; Document) | {};
-  options?: PaginateOptions;
-}
-
-// model: Model&lt;any, {}&gt;,
-// query?: (FilterQuery&lt;T&gt; &amp; Document) | {},
-// options: PaginateOptions &#x3D; {},
-
-@Injectable()
-export class PaginateModel&lt;T extends Document&gt; {
-  public async paginate(args: PaginateModelArgs&lt;T&gt;): Promise&lt;PaginationResult&gt; {
-    const { model, query, options &#x3D; {} } &#x3D; args;
-
-    const {
-      select &#x3D; {},
-      sort &#x3D; {},
-      page &#x3D; 1,
-      limit &#x3D; 10,
-      pagination &#x3D; true,
-      collation,
-      populate,
-    } &#x3D; options;
-    const startIndex &#x3D; (page - 1) * limit;
-    const endIndex &#x3D; page * limit;
-    const dataLength &#x3D; await model.countDocuments().exec();
-    const results: PaginationResult &#x3D; {
-      docs: [],
-      totalDocs: null,
-      limit,
-      hasPrevPage: startIndex &gt; 0,
-      hasNextPage: endIndex &lt; dataLength,
-      page,
-      totalPages: Math.ceil(dataLength / limit),
-      prevPage: startIndex &gt; 0 ? page - 1 : null,
-      nextPage: endIndex &lt; dataLength ? page + 1 : null,
-    };
-    if (!pagination) {
-      results.docs &#x3D; await model
-        .find({ ...query })
-        .select(select)
-        .sort(sort)
-        .collation(collation)
-        .populate(
-          populate?.path,
-          populate?.select,
-          populate?.model,
-          populate?.match,
-        );
-    } else {
-      results.docs &#x3D; await model
-        .find({ ...query })
-        .select(select)
-        .sort(sort)
-        .collation(collation)
-        .populate(
-          populate?.path,
-          populate?.select,
-          populate?.model,
-          populate?.match,
-        )
-        .limit(limit)
-        .skip(startIndex)
-        .exec();
-    }
-    results.totalDocs &#x3D; results.docs.length;
-
-    return results;
-  }
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export interface CreateFeedDTO {
+  title: string;
+  course: string;
+  courseCode: string;
+  level: string;
+  unit: string;
+  content: string;
+  learningStyle: string;
+  thumbnail: string;
+  material: string;
+  createdBy: string;
+  createdAt: Date;
 }
 </code></pre>
     </div>
@@ -523,7 +486,7 @@ export class PaginateModel&lt;T extends Document&gt; {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'PaginationResult.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'CreateFeedDTO.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

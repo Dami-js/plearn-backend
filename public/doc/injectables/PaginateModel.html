@@ -116,15 +116,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>paginate(model: Model<any | literal type>, query:  | literal type, undefined: <a href="../interfaces/PaginateOptions.html">PaginateOptions</a>)</code>
+                    <code>paginate(args: <a href="../injectables/PaginateModel.html">PaginateModelArgs<T></a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="47"
-                            class="link-to-prism">src/providers/PaginateModel.provider.ts:47</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/providers/PaginateModel.provider.ts:57</a></div>
                 </td>
             </tr>
 
@@ -144,32 +144,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>model</td>
+                                    <td>args</td>
                                     <td>
-                                            <code>Model&lt;any | literal type&gt;</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>query</td>
-                                    <td>
-                                            <code> | literal type</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>
-                                                <code><a href="../interfaces/PaginateOptions.html" target="_self" >PaginateOptions</a></code>
+                                                <code><a href="../injectables/PaginateModel.html" target="_self" >PaginateModelArgs&lt;T&gt;</a></code>
                                     </td>
 
                                     <td>
@@ -243,12 +220,22 @@ export interface PaginationResult {
   nextPage: number | null;
 }
 
+export interface PaginateModelArgs&lt;T&gt; {
+  model: Model&lt;any, {}&gt;;
+  query?: (FilterQuery&lt;T&gt; &amp; Document) | {};
+  options?: PaginateOptions;
+}
+
+// model: Model&lt;any, {}&gt;,
+// query?: (FilterQuery&lt;T&gt; &amp; Document) | {},
+// options: PaginateOptions &#x3D; {},
+
 @Injectable()
 export class PaginateModel&lt;T extends Document&gt; {
-  public async paginate(
-    model: Model&lt;any, {}&gt;,
-    query: (FilterQuery&lt;T&gt; &amp; Document) | {},
-    {
+  public async paginate(args: PaginateModelArgs&lt;T&gt;): Promise&lt;PaginationResult&gt; {
+    const { model, query, options &#x3D; {} } &#x3D; args;
+
+    const {
       select &#x3D; {},
       sort &#x3D; {},
       page &#x3D; 1,
@@ -256,8 +243,7 @@ export class PaginateModel&lt;T extends Document&gt; {
       pagination &#x3D; true,
       collation,
       populate,
-    }: PaginateOptions,
-  ): Promise&lt;PaginationResult&gt; {
+    } &#x3D; options;
     const startIndex &#x3D; (page - 1) * limit;
     const endIndex &#x3D; page * limit;
     const dataLength &#x3D; await model.countDocuments().exec();

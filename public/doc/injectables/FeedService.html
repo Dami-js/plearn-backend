@@ -91,7 +91,27 @@
                         <ul class="index-list">
                             <li>
                                     <span class="modifier">Async</span>
+                                <a href="#createFeed">createFeed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#deleteFeed">deleteFeed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#fetchFeeds">fetchFeeds</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#fetchFeedsByLearningStyle">fetchFeedsByLearningStyle</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#fetchFeedsByQuery">fetchFeedsByQuery</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#fetchFeedsByTitle">fetchFeedsByTitle</a>
                             </li>
                         </ul>
                     </td>
@@ -116,7 +136,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/feed/feed.service.ts:9</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/feed/feed.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -175,6 +195,150 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="createFeed"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            createFeed
+                        </b>
+                        <a href="#createFeed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createFeed(body: <a href="../interfaces/CreateFeedDTO.html">CreateFeedDTO</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/feed/feed.service.ts:78</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>body</td>
+                                    <td>
+                                                <code><a href="../interfaces/CreateFeedDTO.html" target="_self" >CreateFeedDTO</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteFeed"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            deleteFeed
+                        </b>
+                        <a href="#deleteFeed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>deleteFeed(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/feed/feed.service.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="fetchFeeds"></a>
                     <span class="name">
                         <b>
@@ -188,15 +352,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>fetchFeeds()</code>
+                    <code>fetchFeeds(arg: <a href="../interfaces/FetchArg.html">FetchArg</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/feed/feed.service.ts:17</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="24"
+                            class="link-to-prism">src/feed/feed.service.ts:24</a></div>
                 </td>
             </tr>
 
@@ -205,8 +369,255 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>arg</td>
+                                    <td>
+                                                <code><a href="../interfaces/FetchArg.html" target="_self" >FetchArg</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
                         <b>Returns : </b>    <code>{}</code>
 
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchFeedsByLearningStyle"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            fetchFeedsByLearningStyle
+                        </b>
+                        <a href="#fetchFeedsByLearningStyle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fetchFeedsByLearningStyle(arg: <a href="../interfaces/FetchArg.html">FetchArg</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="57"
+                            class="link-to-prism">src/feed/feed.service.ts:57</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>arg</td>
+                                    <td>
+                                                <code><a href="../interfaces/FetchArg.html" target="_self" >FetchArg</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchFeedsByQuery"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            fetchFeedsByQuery
+                        </b>
+                        <a href="#fetchFeedsByQuery"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fetchFeedsByQuery(arg: <a href="../interfaces/FetchArg.html">FetchArg</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/feed/feed.service.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>arg</td>
+                                    <td>
+                                                <code><a href="../interfaces/FetchArg.html" target="_self" >FetchArg</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="fetchFeedsByTitle"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            fetchFeedsByTitle
+                        </b>
+                        <a href="#fetchFeedsByTitle"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>fetchFeedsByTitle(title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/feed/feed.service.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>title</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -238,7 +649,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/feed/feed.service.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/feed/feed.service.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -255,7 +666,14 @@
 import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
 import { Model } from &#x27;mongoose&#x27;;
 import { PaginateModel } from &#x27;providers/PaginateModel.provider&#x27;;
+import { CreateFeedDTO } from &#x27;./dto/create-feed.dto&#x27;;
 import { Feed, FeedDocument } from &#x27;./schemas/feed.schema&#x27;;
+
+interface FetchArg {
+  query?: string;
+  learningStyle?: string;
+  page?: number;
+}
 
 @Injectable()
 export class FeedService {
@@ -267,11 +685,86 @@ export class FeedService {
     this.paginate &#x3D; this.paginateModel;
   }
 
-  async fetchFeeds() {
+  async fetchFeeds(arg: FetchArg) {
     try {
-      return await this.paginateModel.paginate(this.feedModel, {}, {});
+      return await this.paginateModel.paginate({
+        model: this.feedModel,
+        options: { page: arg.page },
+      });
     } catch (error) {
       console.log(error);
+    }
+  }
+
+  async fetchFeedsByQuery(arg: FetchArg) {
+    try {
+      const re &#x3D; new RegExp(arg.query, &#x27;i&#x27;);
+      return await this.paginateModel.paginate({
+        model: this.feedModel,
+        query: {
+          $or: [
+            { learningStyle: { $regex: re } },
+            { title: { $regex: re } },
+            { course: { $regex: re } },
+            { level: { $regex: re } },
+            { unit: { $regex: re } },
+            { content: { $regex: re } },
+          ],
+        },
+        options: { page: arg.page },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async fetchFeedsByLearningStyle(arg: FetchArg) {
+    try {
+      return await this.paginateModel.paginate({
+        model: this.feedModel,
+        query: { learningStyle: arg.learningStyle },
+        options: { page: arg.page },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async fetchFeedsByTitle(title: string) {
+    try {
+      return await this.feedModel.findOne({ title });
+    } catch (error) {
+      console.log(error);
+      throw new Error(error.message);
+    }
+  }
+
+  async createFeed(body: CreateFeedDTO) {
+    try {
+      let response: any &#x3D; null;
+      const title &#x3D; body.title.toLowerCase();
+      const feedExist &#x3D; await this.feedModel.findOne({ title });
+      if (feedExist) {
+        throw new Error(&#x27;A feed with this title exists&#x27;);
+      }
+      const newFeed &#x3D; new this.feedModel({ ...body, title });
+      const savedFeed &#x3D; await newFeed.save();
+      response &#x3D; savedFeed;
+      return response;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
+  async deleteFeed(id: string) {
+    try {
+      const deletedFeed &#x3D; await this.feedModel.findByIdAndRemove(id);
+      if (!deletedFeed) {
+        throw new Error(&#x60;Unable to delete. Document not found&#x60;);
+      }
+      return deletedFeed;
+    } catch (error) {
+      throw new Error(error.message);
     }
   }
 }

@@ -1,19 +1,14 @@
 import {
-  Body,
   Controller,
   Get,
   Post,
   Render,
   Request,
-  UploadedFile,
   UseGuards,
-  UseInterceptors,
 } from '@nestjs/common';
-import { FileInterceptor } from '@nestjs/platform-express';
 import { AuthService } from 'auth/auth.service';
 import { LocalAuthGuard } from 'auth/local-auth.guard';
 import { AppService } from './app.service';
-import { Express } from 'express';
 import { UserService } from 'user/user.service';
 
 @Controller()
@@ -35,24 +30,6 @@ export class AppController {
   async login(@Request() req) {
     return this.authService.login(req.user);
   }
-
-  @Post('upload')
-  @UseInterceptors(FileInterceptor('file'))
-  async upload(@Body() body, @UploadedFile() file: Express.Multer.File) {
-    console.log(file, body);
-    // const body: CreateMaterialDto = {
-
-    // }
-    // const result = this.userService.uploadFile()
-
-    return 'upload file';
-  }
-
-  // @UseGuards(JwtAuthGuard)
-  // @Get('profile')
-  // getProfile(@User() user) {
-  //   return user;
-  // }
 
   @Get('todos')
   async getTodos() {

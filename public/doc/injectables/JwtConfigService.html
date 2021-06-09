@@ -106,7 +106,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/config/configuration.ts:74</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">src/config/configuration.ts:77</a></div>
                             </td>
                         </tr>
 
@@ -171,8 +171,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="76"
-                            class="link-to-prism">src/config/configuration.ts:76</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">src/config/configuration.ts:79</a></div>
                 </td>
             </tr>
 
@@ -222,7 +222,7 @@ export default () &#x3D;&gt; ({
 });
 
 // get filename of file
-const filename &#x3D; (str: string) &#x3D;&gt; _.split(str, &#x27;.&#x27;)[0];
+export const getFilename &#x3D; (str: string) &#x3D;&gt; _.split(str, &#x27;.&#x27;)[0];
 
 /**
  * @class MongooseConfigService
@@ -234,6 +234,9 @@ export class MongooseConfigService implements MongooseOptionsFactory {
   createMongooseOptions(): MongooseModuleOptions {
     return {
       uri: this.configService.get&lt;string&gt;(&#x27;database&#x27;),
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+      useNewUrlParser: true,
     };
   }
 }
@@ -252,7 +255,7 @@ export class MulterConfigService implements MulterOptionsFactory {
       storage: diskStorage({
         destination: this.configService.get&lt;string&gt;(&#x27;upload_path&#x27;),
         filename: (req, file, cb) &#x3D;&gt; {
-          const name &#x3D; filename(file.originalname);
+          const name &#x3D; getFilename(file.originalname);
           return cb(null, &#x60;${name}${extname(file.originalname)}&#x60;);
         },
       }),

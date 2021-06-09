@@ -42,12 +42,22 @@ export interface PaginationResult {
   nextPage: number | null;
 }
 
+export interface PaginateModelArgs<T> {
+  model: Model<any, {}>;
+  query?: (FilterQuery<T> & Document) | {};
+  options?: PaginateOptions;
+}
+
+// model: Model<any, {}>,
+// query?: (FilterQuery<T> & Document) | {},
+// options: PaginateOptions = {},
+
 @Injectable()
 export class PaginateModel<T extends Document> {
-  public async paginate(
-    model: Model<any, {}>,
-    query: (FilterQuery<T> & Document) | {},
-    {
+  public async paginate(args: PaginateModelArgs<T>): Promise<PaginationResult> {
+    const { model, query, options = {} } = args;
+
+    const {
       select = {},
       sort = {},
       page = 1,
@@ -55,8 +65,7 @@ export class PaginateModel<T extends Document> {
       pagination = true,
       collation,
       populate,
-    }: PaginateOptions,
-  ): Promise<PaginationResult> {
+    } = options;
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
     const dataLength = await model.countDocuments().exec();

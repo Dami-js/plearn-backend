@@ -1,13 +1,4 @@
-import { Author } from 'user/interfaces/user.interface';
-
-export interface Feed {
-  title: string;
-  image: string;
-  author: Author;
-  learningStyle: string;
-}
-
-export interface Course {
+export interface CreateFeedDTO {
   title: string;
   course: string;
   courseCode: string;

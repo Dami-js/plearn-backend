@@ -7,37 +7,37 @@ export type FeedDocument = Feed & Document;
 @Schema()
 export class Feed implements Course {
   @Prop()
-  id: string;
-
-  @Prop()
   title: string;
 
   @Prop()
-  thumbnail: string;
+  courseCode: string;
 
   @Prop()
-  intro: string;
+  course: string;
 
   @Prop()
-  description: string;
+  level: string;
+
+  @Prop()
+  unit: string;
+
+  @Prop()
+  content: string;
 
   @Prop()
   learningStyle: string;
 
   @Prop()
+  thumbnail: string;
+
+  @Prop()
+  material: string;
+
+  @Prop()
   createdBy: string;
 
-  @Prop()
-  createdAt: string;
-
-  @Prop()
-  objectives: string;
-
-  @Prop()
-  requirements: string;
-
-  @Prop()
-  files: string;
+  @Prop({ type: Date, default: Date.now() })
+  createdAt: Date;
 }
 
 export const FeedSchema = SchemaFactory.createForClass(Feed);

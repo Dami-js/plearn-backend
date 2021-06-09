@@ -43,7 +43,7 @@
 
 <ol class="breadcrumb">
   <li>Interfaces</li>
-  <li>PopulateOptions</li>
+  <li>FetchArg</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/providers/PaginateModel.provider.ts</code>
+            <code>src/feed/feed.service.ts</code>
         </p>
 
 
@@ -79,16 +79,16 @@
                         <td class="col-md-4">
                             <ul class="index-list">
                                 <li>
-                                        <a href="#match">match</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#learningStyle">learningStyle</a>
                                 </li>
                                 <li>
-                                        <a href="#model">model</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#page">page</a>
                                 </li>
                                 <li>
-                                        <a href="#path">path</a>
-                                </li>
-                                <li>
-                                        <a href="#select">select</a>
+                                            <span class="modifier">Optional</span>
+                                        <a href="#query">query</a>
                                 </li>
                             </ul>
                         </td>
@@ -105,13 +105,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="match"></a>
-                                        <span class="name"><b>match</b><a href="#match"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="learningStyle"></a>
+                                        <span class="name"><b>learningStyle</b><a href="#learningStyle"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>match:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>learningStyle:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -119,11 +119,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -134,13 +139,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="model"></a>
-                                        <span class="name"><b>model</b><a href="#model"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="page"></a>
+                                        <span class="name"><b>page</b><a href="#page"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>model:     <code>string | Model&lt;any | literal type&gt;</code>
+                                        <code>page:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -148,11 +153,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>    <code>string | Model&lt;any | literal type&gt;</code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
 
                                         </td>
                                     </tr>
 
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
 
 
 
@@ -163,13 +173,13 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="path"></a>
-                                        <span class="name"><b>path</b><a href="#path"><span class="icon ion-ios-link"></span></a></span>
+                                        <a name="query"></a>
+                                        <span class="name"><b>query</b><a href="#query"><span class="icon ion-ios-link"></span></a></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>path:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                        <code>query:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -177,40 +187,16 @@
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 
                                         </td>
                                     </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="select"></a>
-                                        <span class="name"><b>select</b><a href="#select"><span class="icon ion-ios-link"></span></a></span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>select:         <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-</code>
-                                    </td>
-                                </tr>
-
 
                                     <tr>
                                         <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
+                                            <i>Optional</i>
                                         </td>
                                     </tr>
-
 
 
 
@@ -223,117 +209,109 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@nestjs/common&#x27;;
-import { FilterQuery, Document, Model } from &#x27;mongoose&#x27;;
+import { InjectModel } from &#x27;@nestjs/mongoose&#x27;;
+import { Model } from &#x27;mongoose&#x27;;
+import { PaginateModel } from &#x27;providers/PaginateModel.provider&#x27;;
+import { CreateFeedDTO } from &#x27;./dto/create-feed.dto&#x27;;
+import { Feed, FeedDocument } from &#x27;./schemas/feed.schema&#x27;;
 
-export interface CollationDocument {
-  locale: string;
-  caseLevel: boolean;
-  caseFirst: string;
-  strength: number;
-  numericOrdering: boolean;
-  alternate: string;
-  maxVariable: string;
-  backwards: boolean;
-}
-
-export interface PopulateOptions {
-  path: any;
-  select: any;
-  model: string | Model&lt;any, {}&gt;;
-  match: any;
-}
-
-export interface PaginateOptions {
-  select?: Object | string;
-  sort?: Object | string;
+interface FetchArg {
+  query?: string;
+  learningStyle?: string;
   page?: number;
-  limit?: number;
-  pagination?: boolean;
-  collation?: CollationDocument;
-  populate?: PopulateOptions;
 }
-
-export interface PaginationResult {
-  docs: Array&lt;any&gt;;
-  totalDocs: number;
-  limit: number;
-  hasPrevPage: boolean;
-  hasNextPage: boolean;
-  page: number;
-  totalPages: number;
-  prevPage: number | null;
-  nextPage: number | null;
-}
-
-export interface PaginateModelArgs&lt;T&gt; {
-  model: Model&lt;any, {}&gt;;
-  query?: (FilterQuery&lt;T&gt; &amp; Document) | {};
-  options?: PaginateOptions;
-}
-
-// model: Model&lt;any, {}&gt;,
-// query?: (FilterQuery&lt;T&gt; &amp; Document) | {},
-// options: PaginateOptions &#x3D; {},
 
 @Injectable()
-export class PaginateModel&lt;T extends Document&gt; {
-  public async paginate(args: PaginateModelArgs&lt;T&gt;): Promise&lt;PaginationResult&gt; {
-    const { model, query, options &#x3D; {} } &#x3D; args;
+export class FeedService {
+  paginate: PaginateModel&lt;FeedDocument&gt;;
+  constructor(
+    @InjectModel(Feed.name) private feedModel: Model&lt;FeedDocument&gt;,
+    private paginateModel: PaginateModel&lt;FeedDocument&gt;,
+  ) {
+    this.paginate &#x3D; this.paginateModel;
+  }
 
-    const {
-      select &#x3D; {},
-      sort &#x3D; {},
-      page &#x3D; 1,
-      limit &#x3D; 10,
-      pagination &#x3D; true,
-      collation,
-      populate,
-    } &#x3D; options;
-    const startIndex &#x3D; (page - 1) * limit;
-    const endIndex &#x3D; page * limit;
-    const dataLength &#x3D; await model.countDocuments().exec();
-    const results: PaginationResult &#x3D; {
-      docs: [],
-      totalDocs: null,
-      limit,
-      hasPrevPage: startIndex &gt; 0,
-      hasNextPage: endIndex &lt; dataLength,
-      page,
-      totalPages: Math.ceil(dataLength / limit),
-      prevPage: startIndex &gt; 0 ? page - 1 : null,
-      nextPage: endIndex &lt; dataLength ? page + 1 : null,
-    };
-    if (!pagination) {
-      results.docs &#x3D; await model
-        .find({ ...query })
-        .select(select)
-        .sort(sort)
-        .collation(collation)
-        .populate(
-          populate?.path,
-          populate?.select,
-          populate?.model,
-          populate?.match,
-        );
-    } else {
-      results.docs &#x3D; await model
-        .find({ ...query })
-        .select(select)
-        .sort(sort)
-        .collation(collation)
-        .populate(
-          populate?.path,
-          populate?.select,
-          populate?.model,
-          populate?.match,
-        )
-        .limit(limit)
-        .skip(startIndex)
-        .exec();
+  async fetchFeeds(arg: FetchArg) {
+    try {
+      return await this.paginateModel.paginate({
+        model: this.feedModel,
+        options: { page: arg.page },
+      });
+    } catch (error) {
+      console.log(error);
     }
-    results.totalDocs &#x3D; results.docs.length;
+  }
 
-    return results;
+  async fetchFeedsByQuery(arg: FetchArg) {
+    try {
+      const re &#x3D; new RegExp(arg.query, &#x27;i&#x27;);
+      return await this.paginateModel.paginate({
+        model: this.feedModel,
+        query: {
+          $or: [
+            { learningStyle: { $regex: re } },
+            { title: { $regex: re } },
+            { course: { $regex: re } },
+            { level: { $regex: re } },
+            { unit: { $regex: re } },
+            { content: { $regex: re } },
+          ],
+        },
+        options: { page: arg.page },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async fetchFeedsByLearningStyle(arg: FetchArg) {
+    try {
+      return await this.paginateModel.paginate({
+        model: this.feedModel,
+        query: { learningStyle: arg.learningStyle },
+        options: { page: arg.page },
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  async fetchFeedsByTitle(title: string) {
+    try {
+      return await this.feedModel.findOne({ title });
+    } catch (error) {
+      console.log(error);
+      throw new Error(error.message);
+    }
+  }
+
+  async createFeed(body: CreateFeedDTO) {
+    try {
+      let response: any &#x3D; null;
+      const title &#x3D; body.title.toLowerCase();
+      const feedExist &#x3D; await this.feedModel.findOne({ title });
+      if (feedExist) {
+        throw new Error(&#x27;A feed with this title exists&#x27;);
+      }
+      const newFeed &#x3D; new this.feedModel({ ...body, title });
+      const savedFeed &#x3D; await newFeed.save();
+      response &#x3D; savedFeed;
+      return response;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  }
+
+  async deleteFeed(id: string) {
+    try {
+      const deletedFeed &#x3D; await this.feedModel.findByIdAndRemove(id);
+      if (!deletedFeed) {
+        throw new Error(&#x60;Unable to delete. Document not found&#x60;);
+      }
+      return deletedFeed;
+    } catch (error) {
+      throw new Error(error.message);
+    }
   }
 }
 </code></pre>
@@ -363,7 +341,7 @@ export class PaginateModel&lt;T extends Document&gt; {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'PopulateOptions.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'FetchArg.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

@@ -178,8 +178,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/shared/joiValidation.pipe.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="12"
+                            class="link-to-prism">src/shared/joiValidation.pipe.ts:12</a></div>
                 </td>
             </tr>
 
@@ -258,6 +258,7 @@ import { ObjectSchema } from &#x27;joi&#x27;;
 export class JoiValidationPipe implements PipeTransform {
   constructor(private schema: ObjectSchema) {}
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   transform(value: any, metadata: ArgumentMetadata) {
     const { error } &#x3D; this.schema.validate(value);
     if (error) {

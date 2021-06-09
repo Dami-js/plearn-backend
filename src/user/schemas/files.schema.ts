@@ -1,6 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { Learner } from 'user/interfaces/user.interface';
 
 export type MaterialDocument = Material & Document;
 
