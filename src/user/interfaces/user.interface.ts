@@ -17,5 +17,5 @@ export interface Author extends User {
 export interface Learner extends User {
   level: string;
   studentNumber: string;
-  learningStyle?: Array<string>;
+  learningStyle?: string;
 }

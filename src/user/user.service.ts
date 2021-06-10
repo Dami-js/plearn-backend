@@ -112,7 +112,7 @@ export class UserService {
   async determine(body: QuestionnaireBody) {
     const { answers, user } = body;
 
-    const learningStyle = [];
+    let learningStyle = null;
 
     const formattedAnswers = answers.map((i) => Number(i));
     const activistAnswers = formattedAnswers.slice(0, 8);
@@ -135,17 +135,17 @@ export class UserService {
     const learningStyles = ['activist', 'pragmatist', 'reflector', 'theorist'];
 
     if (_r[0] > _r[1] && _r[0] > _r[2] && _r[0] > _r[3]) {
-      learningStyle.push('activist');
+      learningStyle = 'activist';
     } else if (_r[1] > _r[0] && _r[1] > _r[2] && _r[1] > _r[3]) {
-      learningStyle.push('pragmatist');
+      learningStyle = 'pragmatist';
     } else if (_r[2] > _r[0] && _r[2] > _r[1] && _r[2] > _r[3]) {
-      learningStyle.push('reflector');
+      learningStyle = 'reflector';
     } else if (_r[3] > _r[0] && _r[3] > _r[1] && _r[3] > _r[2]) {
-      learningStyle.push('theorist');
+      learningStyle = 'theorist';
     } else {
       _r.forEach((i, index) => {
         if (_r[index] == _r[index + 1]) {
-          learningStyle.push(learningStyles[index], learningStyles[index + 1]);
+          learningStyle = learningStyles[index];
         }
         return;
       });
